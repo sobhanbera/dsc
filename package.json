@@ -1,19 +1,36 @@
 {
   "name": "gdsc-ghrce",
+  "version": "0.0.1",
   "private": true,
+  "description": "GDSC-GHRCE Community main page.",
   "scripts": {
-    "dev": "next dev",
+    "start": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "nxt:start": "next start",
+    "lint": "next lint",
+    "prettier-check": "yarn prettier -c pages styles",
+    "prettier-format": "yarn prettier --write pages styles && git status"
   },
   "dependencies": {
+    "axios": "^0.24.0",
+    "bcrypt": "^5.0.1",
+    "dayjs": "^1.10.7",
+    "dotenv": "^10.0.0",
     "next": "12.0.4",
+    "nodemailer": "^6.7.2",
+    "public-ip": "^4.0.4",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
   "devDependencies": {
     "eslint": "7",
-    "eslint-config-next": "12.0.4"
+    "eslint-config-next": "12.0.4",
+    "neovim": "^4.10.0",
+    "prettier": "^2.5.0"
+  },
+  "homepage": "https://github.com/sobhanbera/gdsc-ghrce",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sobhanbera/gdsc-ghrce.git"
   }
 }
