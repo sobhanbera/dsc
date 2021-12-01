@@ -1,34 +1,63 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
+  <img alt="GDSC-GHRCE Logo" src="https://github.com/sobhanbera/gdsc-ghrce/blob/main/.github_src/logo_name.png" width="400px" />
 
-## Getting Started
+**Main Website of GDSC-GHRCE. Currently under-developement.**
 
-First, run the development server:
+</div>
 
-```bash
-npm run dev
-# or
-yarn dev
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#get-started">Get Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#environment-setup">Dev Environment Setup</a></li>
+      </ul>
+    </li>
+  </ol>
+</details>
+
+## Get Started:
+
+### Prerequisites
+
+This is an example of how to list things you need to use the software and how to install them.
+
+- npm
+
+```sh
+npm install yarn@latest -g
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+or
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```sh
+npm install npm@latest -g
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+### Environment Setup
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+1. Fork this repository
+2. Clone the repository.
 
-## Learn More
+```sh
+git clone https://github.com/[YOUR_GITHUB_USERNAME_HERE]/sobyte.git
+```
 
-To learn more about Next.js, take a look at the following resources:
+3. Run this command at the root of project directory.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```sh
+yarn install
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+4. To run the website in local development phase.
 
-## Deploy on Vercel
+```
+yarn start
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+5. More sections will be updated soon in this README.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<div align="center">
+  <img alt="GDSC-GHRCE Logo" src="https://github.com/sobhanbera/gdsc-ghrce/blob/main/.github_src/logo_name.png" width="400px" />
