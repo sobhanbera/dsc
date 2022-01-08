@@ -1,7 +1,12 @@
 import '../styles/globals.css'
+import {AsciiArt, Header, Footer} from '../components'
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+export default function MyApp({Component, pageProps}) {
+    return (
+        <AsciiArt>
+            <Header />
+            <Component {...pageProps} />
+            <Footer />
+        </AsciiArt>
+    )
 }
-
-export default MyApp
