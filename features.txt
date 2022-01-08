@@ -1,0 +1,22 @@
+List of different pages:
+1. landing page
+    1. heading
+    2. description
+    3.
+2. events - search
+3. blogs - search
+4. contact
+5. team member - search
+6. videos page
+
+Global page schema:
+header
+main
+footer
+
+Frameworks:
+1. nextjs
+2. gsap
+3. sass
+
+
