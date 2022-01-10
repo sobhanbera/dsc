@@ -1,47 +1,61 @@
-import {useEffect, useState} from 'react'
+import { useEffect, useState } from 'react'
 import Head from 'next/head'
-import {motion} from 'framer-motion'
-import {useInView} from 'react-intersection-observer'
+import { useInView } from 'react-intersection-observer'
 
-import {GOOGLE_COLORS} from '../constants'
+import { GOOGLE_COLORS } from '../constants'
 
-function Button({changeColor, color}) {
+function ColorTrigger({ changeColor, color }) {
     const [ref, inView] = useInView()
 
     useEffect(() => {
-        if (inView) changeColor(color)
+        if (inView) {
+            console.log("Color changed to:", color)
+            changeColor(color)
+        }
     }, [inView])
+
     return (
-        <button
-            ref={ref}
-            style={{
-                margin: '40vh',
-            }}>
-            Change Color {color}
-        </button>
+        <div ref={ref} style={{
+            height: '100vh',
+        }}></div>
     )
 }
 
 export default function LandingPage() {
-    // const [backgroundColor, setBackgroundColor] = useState('#4040ef')
+    const [backgroundColor, setBackgroundColor] = useState('#ffffff')
 
-    function changeColor(color = '#4040EF') {
+    function changeColor(color = '#ffffff') {
         setBackgroundColor(color)
     }
 
     return (
         <div
             style={{
-                // backgroundColor,
                 display: 'flex',
                 flexDirection: 'column',
-                minHeight: '400vh',
+                backgroundColor,
+                transition: 'background 3s'
             }}>
-            MAIN
-            {/* <Button color={GOOGLE_COLORS.RED + ''} changeColor={changeColor} />
-            <Button color={GOOGLE_COLORS.BLUE + ''} changeColor={changeColor} />
-            <Button color={GOOGLE_COLORS.GREEN + ''} changeColor={changeColor} />
-            <Button color={GOOGLE_COLORS.YELLOW + ''} changeColor={changeColor} /> */}
+            <Head>
+                <title>Google Developer Student Clubs GHRCE</title>
+            </Head>
+            <p>Color is white currently... keep scrolling...</p>
+            <ColorTrigger color={'#FFFFFF'} changeColor={changeColor} />
+
+            <p>Color will change here to blue</p>
+            <ColorTrigger color={GOOGLE_COLORS.BLUE + '50'} changeColor={changeColor} />
+
+            <p>Color will change here to redish</p>
+            <ColorTrigger color={GOOGLE_COLORS.RED + '50'} changeColor={changeColor} />
+
+            <p>Color will change here to green</p>
+            <ColorTrigger color={GOOGLE_COLORS.GREEN + '50'} changeColor={changeColor} />
+
+            <p>Color will change here to yellow</p>
+            <ColorTrigger color={GOOGLE_COLORS.YELLOW + '50'} changeColor={changeColor} />
+
+            <p>Color will now change to white back.</p>
+            <ColorTrigger color={'#ffffff'} changeColor={changeColor} />
         </div>
     )
 }

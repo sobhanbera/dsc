@@ -13,7 +13,9 @@ export const GOOGLE_COLORS = {
 }
 export const RANDOM_GOOGLE_COLOR = randomElementOfArray(Object.values(['red', 'blue', 'green', 'yellow']))
 
-export const LIGHT_GDSC_ICON_SRC = 'https://res.cloudinary.com/startup-grind/image/upload/dpr_2.0,fl_sanitize/v1/gcs/platform-data-dsc/contentbuilder/logo_dark_stacked_KzUurne.png'
-export const DARK_GDSC_ICON_SRC = 'https://res.cloudinary.com/startup-grind/image/upload/dpr_2.0,fl_sanitize/v1/gcs/platform-data-dsc/contentbuilder/logo_light_stacked_sGGf21U.svg'
+export const CONTACT_AREA_LINK = 'mailto:sobhanbera258@gmail.com'
+export const CONTACT_AREA_NAME = 'Khushboo Agnihotri'
+export const CONTACT_AREA_POSTITION = 'Lead - GDSC GHRCE'
+export const CONTACT_AREA_PROVIDED = 'Email'
 
 export const HEADER_HEIGHT = 55
