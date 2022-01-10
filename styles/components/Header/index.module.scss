@@ -1,0 +1,282 @@
+.header {
+    width: 100%;
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+    display: block;
+    background-color: var(--background);
+    // background-color: var(--google-blue-color);
+
+    &.scrolled {
+        box-shadow: 0 0 8px var(--common-shadow);
+    }
+
+    .mainHeaderContainer {
+        width: 1260px;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+        padding: 0 15px;
+        background-color: var(--random-primary-color);
+
+        .headerHamburgerMenuIcon {
+            display: none;
+            cursor: pointer;
+        }
+
+        .logoSpan {
+            a {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+
+                svg {
+                    width: max-content;
+                    margin: 0;
+                    padding: 0;
+                    height: 36px;
+                }
+
+                p {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    padding: 0 3px;
+
+                    span {
+                        padding: 0 3px;
+
+                        // first if the full form of GDSC
+                        &:nth-child(1) {
+                            font-size: 16px;
+                            color: var(--text-color-light);
+                            font-weight: 400;
+                        }
+
+                        // second is the short form of the GDSC
+                        &:nth-child(2) {
+                            display: none;
+
+                            font-size: 14px;
+                            color: var(--text-color-light);
+                            font-weight: 500;
+                        }
+
+                        // third is the GHRCE name
+                        &:nth-child(3) {
+                            font-size: 14px;
+                            color: var(--text-color-light);
+                        }
+                    }
+                }
+            }
+        }
+
+        nav {
+            transition: 0.5s left;
+
+            ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+
+                li {
+                    border-radius: 6px;
+                    // background-color: red;
+                    margin: 0 5px;
+                    font-weight: 300;
+                    cursor: pointer;
+                    color: var(--text-color-light);
+                    display: flex;
+
+                    a {
+                        padding: 5px 9px;
+                        color: var(--text-color-light);
+                        flex-grow: 5;
+
+                        &:hover {
+                            color: var(--text-color);
+                        }
+                    }
+
+                    &:hover {
+                        background: var(--hover-background);
+                        color: var(--text-color);
+                    }
+
+                    &.activePage {
+                        font-weight: 500;
+                    }
+
+                    button {
+                        cursor: pointer;
+                        width: max-content;
+                        height: max-content;
+                        background-color: transparent;
+                        outline: none;
+                        border: none;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+
+                        svg {
+                            transition: 1s all;
+                            height: 22px;
+                            width: 22px;
+                            padding: 0;
+                            margin: 0;
+                            fill: var(--google-primary-color);
+                        }
+                    }
+                }
+            }
+        }
+
+        .extraCenteringDiv {
+            display: none;
+
+            button {
+                cursor: pointer;
+                width: max-content;
+                height: max-content;
+                background-color: transparent;
+                outline: none;
+                border: none;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                svg {
+                    transition: 1s all;
+                    height: 22px;
+                    width: 22px;
+                    padding: 0;
+                    margin: 0;
+                    fill: var(--google-primary-color);
+                }
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .header {
+        width: 100%;
+
+        .mainHeaderContainer {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .header {
+        width: 100%;
+
+        .mainHeaderContainer {
+            width: 100%;
+
+            .headerHamburgerMenuIcon {
+                display: block;
+            }
+
+            nav {
+                position: absolute;
+                top: 55px;
+                left: -1001px; // this should be greater than the max-width size of this media query
+                z-index: 90;
+                width: 100%;
+                background: var(--background);
+
+                ul {
+                    flex-direction: column;
+                    padding: 0;
+                    margin: 0;
+
+                    li {
+                        text-align: start;
+                        width: 100%;
+
+                        a {
+                            text-align: start;
+                            background: yellow;
+                            background: var(--background);
+                            border-bottom: 0.6px solid var(--border);
+                            padding: 9px 24px;
+
+                            // for overall border
+                            &:nth-child(1) {
+                                border-top: 0.6px solid var(--border);
+                            }
+
+                            &:hover {
+                                background: var(--hover-background);
+                            }
+                        }
+
+                        button {
+                            display: none;
+                        }
+                    }
+                }
+
+                &.menuActive {
+                    top: 55px;
+                    left: 0;
+                }
+            }
+
+            .extraCenteringDiv {
+                display: block;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .header {
+        width: 100%;
+
+        .mainHeaderContainer {
+            width: 100%;
+
+            .headerHamburgerMenuIcon {
+                display: block;
+            }
+
+            .logoSpan {
+                a {
+                    p {
+                        span {
+                            // first if the full form of GDSC
+                            &:nth-child(1) {
+                                display: none;
+                            }
+
+                            // second is the short form of the GDSC
+                            &:nth-child(2) {
+                                display: block;
+                            }
+
+                            // third is the GHRCE name
+                            &:nth-child(3) {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
