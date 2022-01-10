@@ -2,30 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 :root {
+    --discord: #738adb;
+    --github: #171515;
+    --instagram: #fb3958;
+    --linkedin: #0a66c2;
+    --twitter: #1da1f2;
+    --youtube: #c4302b;
 }
 
 @font-face {
     font-family: Google-Sans;
     src: url(../public/fonts/ProductSans-Regular.ttf);
-}
-
-* {
-    box-sizing: border-box;
-    transition: 0.35s all;
-
-    outline: none;
-    list-style: none;
-    list-style-type: none;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-body {
-    padding: 0;
-    margin: 0;
-    font-family: Karla, Roboto, Ubuntu, sans-serif;
-    font-size: 18px;
-    background-color: var(--background);
 }
 
 .light-theme {
@@ -49,20 +36,20 @@ body {
 }
 
 .dark-theme {
-    --google-blue-color: #FFFFFF;
-    --google-red-color: #FFFFFF;
-    --google-yellow-color: #FFFFFF;
-    --google-green-color: #FFFFFF;
+    --google-blue-color: #ffffff;
+    --google-red-color: #ffffff;
+    --google-yellow-color: #ffffff;
+    --google-green-color: #ffffff;
 
     --theme-color: #000000;
     --theme-invert-color: #ffffff;
 
-    --text-color: #EFEFEF;
-    --text-color-light: #DFDFDF;
+    --text-color: #efefef;
+    --text-color-light: #dfdfdf;
     --common-shadow: #7f7f7f50;
 
-    --background: #000000;
-    --hover-background: #151515;
+    --background: #151515;
+    --hover-background: #272727;
 
     --border: #272727;
     --svg-color: #f7f7f7;
@@ -82,4 +69,29 @@ body {
 }
 .white {
     --google-primary-color: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    transition: 0.35s all;
+
+    outline: none;
+    list-style: none;
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 18px;
+    color: var(--text-color);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Karla, Roboto, Ubuntu, sans-serif;
+    font-size: 18px;
+    background-color: var(--background);
+    color: var(--text-color);
+}
+
+.main-content {
+    min-height: 75vh;
 }
