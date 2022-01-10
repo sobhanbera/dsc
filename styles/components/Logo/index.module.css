@@ -1,0 +1,16 @@
+.logoRedPart {
+  fill: var(--google-red-color);
+}
+
+.logoBluePart {
+  fill: var(--google-blue-color);
+}
+
+.logoGreenPart {
+  fill: var(--google-green-color);
+}
+
+.logoYellowPart {
+  fill: var(--google-yellow-color);
+}
+/*# sourceMappingURL=index.module.css.map */
