@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root {
+}
+
+@font-face {
+    font-family: Google-Sans;
+    src: url(../public/fonts/ProductSans-Regular.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    transition: 0.35s all;
+
+    outline: none;
+    list-style: none;
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Karla, Roboto, Ubuntu, sans-serif;
+    font-size: 18px;
+    background-color: var(--background);
+}
+
+.light-theme {
+    --google-blue-color: #4285f4;
+    --google-red-color: #db4437;
+    --google-yellow-color: #f4b400;
+    --google-green-color: #0f9d58;
+
+    --theme-color: #ffffff;
+    --theme-invert-color: #000000;
+
+    --text-color: #151515;
+    --text-color-light: #505050;
+    --common-shadow: #7f7f7f50;
+
+    --background: #ffffff;
+    --hover-background: #efefef;
+
+    --border: #d7d7d7;
+    --svg-color: #101010;
+}
+
+.dark-theme {
+    --google-blue-color: #FFFFFF;
+    --google-red-color: #FFFFFF;
+    --google-yellow-color: #FFFFFF;
+    --google-green-color: #FFFFFF;
+
+    --theme-color: #000000;
+    --theme-invert-color: #ffffff;
+
+    --text-color: #EFEFEF;
+    --text-color-light: #DFDFDF;
+    --common-shadow: #7f7f7f50;
+
+    --background: #000000;
+    --hover-background: #151515;
+
+    --border: #272727;
+    --svg-color: #f7f7f7;
+}
+
+.red {
+    --google-primary-color: #db4437;
+}
+.blue {
+    --google-primary-color: #4285f4;
+}
+.green {
+    --google-primary-color: #0f9d58;
+}
+.yellow {
+    --google-primary-color: #f4b400;
+}
+.white {
+    --google-primary-color: #ffffff;
+}
