@@ -20,9 +20,11 @@ export default function MyApp({ Component, pageProps }) {
                     ref={ref}
                     style={{
                         height: `${HEADER_HEIGHT}px`,
-                    }}></div>
+                    }} ></div>
 
-                <Component {...pageProps} />
+                <div className={'main-content'}>
+                    <Component {...pageProps} />
+                </div>
 
                 <Footer />
             </Ascii>

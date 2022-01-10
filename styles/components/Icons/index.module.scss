@@ -1,0 +1,47 @@
+.discordSvg {
+    fill: var(--theme-invert-color);
+
+    &:hover {
+        fill: var(--discord);
+    }
+}
+
+.githubSvg {
+    fill: var(--theme-invert-color);
+
+    &:hover {
+        fill: var(--github);
+    }
+}
+
+.instagramSvg {
+    fill: var(--theme-invert-color);
+
+    &:hover {
+        fill: var(--instagram);
+    }
+}
+
+.linkedinSvg {
+    fill: var(--theme-invert-color);
+
+    &:hover {
+        fill: var(--linkedin);
+    }
+}
+
+.twitterSvg {
+    fill: var(--theme-invert-color);
+
+    &:hover {
+        fill: var(--twitter);
+    }
+}
+
+.youtubeSvg {
+    fill: var(--theme-invert-color);
+
+    &:hover {
+        fill: var(--youtube);
+    }
+}
