@@ -18,6 +18,7 @@
   z-index: 100;
   display: block;
   background-color: var(--background);
+  overflow: hidden;
 }
 
 .header.scrolled {

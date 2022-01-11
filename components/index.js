@@ -9,5 +9,6 @@ import ThemeToggler from './ThemeToggler'
 
 import SearchBar from './SearchBar'
 import Loading from './Loading'
+import RedirectButton from './RedirectButton'
 
-export {AsciiArt, Header, Footer, HamburgerIcon, GDSC_GHRCELogo as WebsiteLogo, ThemeToggler, SearchBar, Loading}
+export { AsciiArt, Header, Footer, HamburgerIcon, GDSC_GHRCELogo as WebsiteLogo, ThemeToggler, SearchBar, Loading, RedirectButton }

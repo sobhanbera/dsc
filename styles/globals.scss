@@ -51,7 +51,7 @@
     --background: #151515;
     --hover-background: #272727;
 
-    --border: #272727;
+    --border: #353535;
     --svg-color: #f7f7f7;
 }
 
@@ -97,6 +97,14 @@ body {
     font-size: 18px;
     background-color: var(--background);
     color: var(--text-color);
+}
+
+a {
+    color: var(--text-color);
+
+    &:hover {
+        color: var(--google-primary-color);
+    }
 }
 
 .main-content {
