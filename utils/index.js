@@ -1,3 +1,5 @@
+import {MONTHS_LIST} from '../constants'
+
 /**
  * get a random element from any type of aray
  * @param {Array} array any type of array
@@ -15,4 +17,14 @@ export function randomElementOfArray(array = []) {
  */
 export function shortenText(string = '', limit = 30) {
     return string.length > limit ? string.substring(0, limit) + '...' : string.substring(0, limit)
+}
+
+/**
+ * get a formatted date with date string
+ * @param {string} date any date format
+ * @returns a well formatted date in string format
+ */
+export function getFormattedDate(date = new Date().toString()) {
+    const time = new Date(date)
+    return `${MONTHS_LIST[time.getMonth()]} ${time.getDate()}`
 }
