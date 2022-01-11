@@ -1,5 +1,6 @@
 import React from 'react'
 import {AiOutlineSearch} from 'react-icons/ai'
+import {MdCancel} from 'react-icons/md'
 
 import styles from '../../styles/components/SearchBar/index.module.css'
 
@@ -10,6 +11,7 @@ export default function SearchBar({searchText, setSearch}) {
         <div className={styles.searchBarContainer}>
             <input id="search_bar" type="text" dataValue="asdf" placeholder="Search..." autoComplete="off" value={searchText} onChange={e => setSearch(e.target.value)} />
             <label htmlFor="search_bar">
+                <MdCancel size={22} onClick={() => setSearch('')} />
                 <AiOutlineSearch size={22} />
             </label>
         </div>
