@@ -7,4 +7,7 @@ import HamburgerIcon from './HamburgerIcon'
 import GDSC_GHRCELogo from './Logo'
 import ThemeToggler from './ThemeToggler'
 
-export { AsciiArt, Header, Footer, HamburgerIcon, GDSC_GHRCELogo as WebsiteLogo, ThemeToggler }
+import SearchBar from './SearchBar'
+import Loading from './Loading'
+
+export {AsciiArt, Header, Footer, HamburgerIcon, GDSC_GHRCELogo as WebsiteLogo, ThemeToggler, SearchBar, Loading}
