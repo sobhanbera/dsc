@@ -17,9 +17,6 @@
         justify-content: center;
         // align-items: center;
 
-        .searchBarContainer {
-        }
-
         .videosContainer {
             display: flex;
             flex-direction: row;
@@ -114,6 +111,20 @@
                     flex-direction: column;
                     // justify-content: center;
                     max-height: 600px;
+
+                    .videoDetail {
+                        p {
+                            padding: 10px 0;
+
+                            &:nth-child(2) {
+                                padding: 10px 0;
+                                color: var(--text-color-light);
+
+                                font-weight: 300;
+                                font-size: 16px;
+                            }
+                        }
+                    }
                 }
             }
         }
