@@ -16,7 +16,7 @@
 }
 
 .searchBarContainer input {
-  min-width: 330px;
+  min-width: 200px;
   padding: 0 16px 0 16px;
   height: 40px;
   -webkit-box-flex: 3;
