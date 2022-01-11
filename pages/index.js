@@ -3,21 +3,24 @@ import Head from 'next/head'
 import { useInView } from 'react-intersection-observer'
 
 import { GOOGLE_COLORS } from '../constants'
+import axios from 'axios'
 
 function ColorTrigger({ changeColor, color }) {
     const [ref, inView] = useInView()
 
     useEffect(() => {
         if (inView) {
-            console.log("Color changed to:", color)
+            console.log('Color changed to:', color)
             changeColor(color)
         }
     }, [inView])
 
     return (
-        <div ref={ref} style={{
-            height: '100vh',
-        }}></div>
+        <div
+            ref={ref}
+            style={{
+                height: '100vh',
+            }}></div>
     )
 }
 
@@ -29,8 +32,7 @@ export default function LandingPage() {
     }
 
     useEffect(() => {
-        window.addEventListener("scroll", () => {
-            console.log(window.scrollY)
+        window.addEventListener('scroll', () => {
             const { scrollY } = window
             if (scrollY > 0 && scrollY < 160) {
                 setBackgroundColor('#FFFFFF')
@@ -46,6 +48,10 @@ export default function LandingPage() {
                 setBackgroundColor('#FFFFFF')
             }
         })
+
+        return () => {
+            window.removeEventListener('scroll', null)
+        }
     }, [])
 
     return (
@@ -54,7 +60,7 @@ export default function LandingPage() {
                 display: 'flex',
                 flexDirection: 'column',
                 backgroundColor,
-                transition: 'background 1s'
+                transition: 'background 1s',
             }}>
             <Head>
                 <title>Google Developer Student Clubs GHRCE</title>
