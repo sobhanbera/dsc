@@ -1,0 +1,72 @@
+.videosPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px 0 30px 0; }
+  .videosPage h1 {
+    font-size: 24px; }
+  .videosPage .mainVideosContainer {
+    max-width: 1450px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .videosPage .mainVideosContainer .videosContainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap; }
+      .videosPage .mainVideosContainer .videosContainer .videoCard {
+        max-width: 650px;
+        border-radius: 5px;
+        border: 1px solid var(--border);
+        max-width: 700px;
+        padding: 15px 15px;
+        margin: 12px 10px 10px 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-grow: 2;
+        cursor: pointer;
+        max-height: 225px;
+        overflow: hidden; }
+        .videosPage .mainVideosContainer .videosContainer .videoCard:hover {
+          border: 1px solid var(--google-primary-color);
+          box-shadow: 0px 2px 0px rgba(var(--google-primary-color-rgb), 0.5); }
+        .videosPage .mainVideosContainer .videosContainer .videoCard .imageSection img {
+          border-radius: 5px; }
+        .videosPage .mainVideosContainer .videosContainer .videoCard .videoDetail {
+          display: flex;
+          flex-direction: column;
+          justify-self: flex-start;
+          align-items: flex-start; }
+          .videosPage .mainVideosContainer .videosContainer .videoCard .videoDetail p {
+            max-width: 300px;
+            font-weight: 500;
+            padding: 0 6px 0 10px;
+            margin: 0;
+            font-size: 18px;
+            align-self: flex-start;
+            -webkit-line-clamp: 2;
+            /* number of lines to show */
+            line-clamp: 1;
+            -webkit-box-orient: vertical;
+            white-space: pre-line; }
+            .videosPage .mainVideosContainer .videosContainer .videoCard .videoDetail p:nth-child(2) {
+              padding: 10px 6px 6px 10px;
+              color: var(--text-color-light);
+              font-weight: 300;
+              font-size: 16px; }
+
+@media screen and (max-width: 1400px) {
+  .videosPage .mainVideosContainer .videosContainer {
+    flex-direction: column; } }
+@media screen and (max-width: 700px) {
+  .videosPage .mainVideosContainer .videosContainer .videoCard {
+    flex-direction: column;
+    max-height: 600px; } }
+
+/*# sourceMappingURL=index.module.css.map */
