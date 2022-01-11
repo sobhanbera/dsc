@@ -9,7 +9,7 @@ export default function SearchBar({ searchText, setSearch, search }) {
     return (
         <div className={styles.searchBarContainer}>
             <input id="search_bar" type="text" dataValue="asdf" placeholder="Search..." autoComplete="off" value={searchText} onChange={e => setSearch(e.target.value)} />
-            <label for="search_bar">
+            <label htmlFor="search_bar">
                 <AiOutlineSearch size={22} />
             </label>
         </div>
