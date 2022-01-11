@@ -57,18 +57,23 @@
 
 .red {
     --google-primary-color: #db4437;
+    --google-primary-color-rgb: 219, 68, 55;
 }
 .blue {
     --google-primary-color: #4285f4;
+    --google-primary-color-rgb: 66, 133, 244;
 }
 .green {
     --google-primary-color: #0f9d58;
+    --google-primary-color-rgb: 15, 157, 88;
 }
 .yellow {
     --google-primary-color: #f4b400;
+    --google-primary-color-rgb: 244, 180, 0;
 }
 .white {
     --google-primary-color: #ffffff;
+    --google-primary-color-rgb: 255, 255, 255;
 }
 
 * {
@@ -81,6 +86,8 @@
     text-decoration: none;
     font-size: 18px;
     color: var(--text-color);
+
+    background: var(--background);
 }
 
 body {

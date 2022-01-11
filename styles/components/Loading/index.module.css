@@ -1,0 +1,54 @@
+.loadingContainer .loadingWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px; }
+  .loadingContainer .loadingWrapper .ball {
+    width: 22px;
+    height: 22px;
+    border-radius: 11px;
+    margin: 0 10px;
+    animation: 2s bounce ease infinite; }
+    .loadingContainer .loadingWrapper .ball.blue {
+      background-color: #4285f5; }
+    .loadingContainer .loadingWrapper .ball.red {
+      background-color: #ea4436;
+      animation-delay: 0.25s; }
+    .loadingContainer .loadingWrapper .ball.yellow {
+      background-color: #fbbd06;
+      animation-delay: 0.5s; }
+    .loadingContainer .loadingWrapper .ball.green {
+      background-color: #34a952;
+      animation-delay: 0.75s; }
+.loadingContainer p {
+  text-align: center; }
+
+@keyframes bounce {
+  50% {
+    transform: translateY(25px); } }
+@media screen and (max-width: 1000px) {
+  .loadingContainer .loadingWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px; }
+    .loadingContainer .loadingWrapper .ball {
+      width: 18px;
+      height: 18px;
+      border-radius: 11px;
+      margin: 0 6px;
+      animation: 2s bounce ease infinite; } }
+@media screen and (max-width: 1000px) {
+  .loadingContainer .loadingWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; }
+    .loadingContainer .loadingWrapper .ball {
+      width: 14px;
+      height: 14px;
+      border-radius: 11px;
+      margin: 0 8px;
+      animation: 2s bounce ease infinite; } }
+
+/*# sourceMappingURL=index.module.css.map */
