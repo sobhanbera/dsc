@@ -1,4 +1,4 @@
-import { createContext, useContext, useRef, useState } from 'react'
+import { createContext, useContext, useEffect, useRef, useState } from 'react'
 
 import { randomElementOfArray } from '../utils'
 import { GOOGLE_COLORS, RANDOM_GOOGLE_COLOR } from '../constants'
@@ -16,8 +16,26 @@ function ThemeProvider(props) {
     // or in other words colorscheme provider of website
     const [theme, setTheme] = useState(true)
 
+    // get the theme from local data of browser
+    useEffect(() => {
+        updateThemeEverywhere()
+    }, [])
+
+    // update the local instance of the theme when the theme is updated in the website
+    useEffect(() => {
+        localStorage.theme = String(theme)
+    }, [theme])
+
     const toggleTheme = () => {
         setTheme(value => !value)
+    }
+    // getting the local theme data from localStorage
+    const updateThemeEverywhere = () => {
+        const localTheme = localStorage.theme
+        if (localTheme === 'true')
+            setTheme(true)
+        else
+            setTheme(false)
     }
 
     const value = {
