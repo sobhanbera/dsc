@@ -1,326 +1,178 @@
 .header {
   width: 100%;
   height: 55px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   z-index: 100;
   display: block;
-  background-color: var(--background);
-  overflow: hidden;
-}
-
-.header.scrolled {
-  -webkit-box-shadow: 0 0 8px var(--common-shadow);
-          box-shadow: 0 0 8px var(--common-shadow);
-}
-
-.header .mainHeaderContainer {
-  width: 1260px;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: auto;
-  padding: 0 15px;
-  background-color: var(--random-primary-color);
-}
-
-.header .mainHeaderContainer .headerHamburgerMenuIcon {
-  display: none;
-  cursor: pointer;
-}
-
-.header .mainHeaderContainer .logoSpan a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.header .mainHeaderContainer .logoSpan a svg {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  margin: 0;
-  padding: 0;
-  height: 36px;
-}
-
-.header .mainHeaderContainer .logoSpan a p {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  padding: 0 3px;
-}
-
-.header .mainHeaderContainer .logoSpan a p span {
-  padding: 0 3px;
-}
-
-.header .mainHeaderContainer .logoSpan a p span:nth-child(1) {
-  font-size: 16px;
-  color: var(--text-color-light);
-  font-weight: 400;
-}
-
-.header .mainHeaderContainer .logoSpan a p span:nth-child(2) {
-  display: none;
-  font-size: 14px;
-  color: var(--text-color-light);
-  font-weight: 500;
-}
-
-.header .mainHeaderContainer .logoSpan a p span:nth-child(3) {
-  font-size: 14px;
-  color: var(--text-color-light);
-}
-
-.header .mainHeaderContainer nav {
-  -webkit-transition: 0.5s left;
-  transition: 0.5s left;
-}
-
-.header .mainHeaderContainer nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.header .mainHeaderContainer nav ul li {
-  border-radius: 6px;
-  margin: 0 5px;
-  font-weight: 300;
-  cursor: pointer;
-  color: var(--text-color-light);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.header .mainHeaderContainer nav ul li a {
-  padding: 5px 9px;
-  color: var(--text-color-light);
-  -webkit-box-flex: 5;
-      -ms-flex-positive: 5;
-          flex-grow: 5;
-}
-
-.header .mainHeaderContainer nav ul li a:hover {
-  color: var(--text-color);
-}
-
-.header .mainHeaderContainer nav ul li:hover {
-  background: var(--hover-background);
-  color: var(--text-color);
-}
-
-.header .mainHeaderContainer nav ul li.activePage {
-  font-weight: 500;
-}
-
-.header .mainHeaderContainer nav ul li button {
-  cursor: pointer;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
-  background-color: transparent;
-  outline: none;
-  border: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.header .mainHeaderContainer nav ul li button svg {
-  -webkit-transition: 1s all;
-  transition: 1s all;
-  height: 22px;
-  width: 22px;
-  padding: 0;
-  margin: 0;
-  fill: var(--google-primary-color);
-}
-
-.header .mainHeaderContainer .extraCenteringDiv {
-  display: none;
-}
-
-.header .mainHeaderContainer .extraCenteringDiv button {
-  cursor: pointer;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
-  background-color: transparent;
-  outline: none;
-  border: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.header .mainHeaderContainer .extraCenteringDiv button svg {
-  -webkit-transition: 1s all;
-  transition: 1s all;
-  height: 22px;
-  width: 22px;
-  padding: 0;
-  margin: 0;
-  fill: var(--google-primary-color);
-}
+  background-color: var(--background); }
+  .header.scrolled {
+    box-shadow: 0 0 8px var(--common-shadow); }
+  .header .mainHeaderContainer {
+    width: 1260px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding: 0 15px;
+    background-color: var(--random-primary-color); }
+    .header .mainHeaderContainer .headerHamburgerMenuIcon {
+      display: none;
+      cursor: pointer; }
+    .header .mainHeaderContainer .logoSpan a {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center; }
+      .header .mainHeaderContainer .logoSpan a svg {
+        width: max-content;
+        margin: 0;
+        padding: 0;
+        height: 36px; }
+      .header .mainHeaderContainer .logoSpan a p {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 0 3px;
+        margin: 0; }
+        .header .mainHeaderContainer .logoSpan a p span {
+          padding: 0 3px; }
+          .header .mainHeaderContainer .logoSpan a p span:nth-child(1) {
+            font-size: 16px;
+            color: var(--text-color-light);
+            font-weight: 400; }
+          .header .mainHeaderContainer .logoSpan a p span:nth-child(2) {
+            display: none;
+            font-size: 14px;
+            color: var(--text-color-light);
+            font-weight: 500; }
+          .header .mainHeaderContainer .logoSpan a p span:nth-child(3) {
+            font-size: 14px;
+            color: var(--text-color-light); }
+    .header .mainHeaderContainer nav {
+      transition: 0.5s left;
+      background-color: transparent; }
+      .header .mainHeaderContainer nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center; }
+        .header .mainHeaderContainer nav ul li {
+          border-radius: 6px;
+          margin: 0 5px;
+          font-weight: 300;
+          cursor: pointer;
+          color: var(--text-color-light);
+          display: flex; }
+          .header .mainHeaderContainer nav ul li a {
+            padding: 5px 9px;
+            color: var(--text-color-light);
+            flex-grow: 5; }
+            .header .mainHeaderContainer nav ul li a:hover {
+              color: var(--text-color); }
+          .header .mainHeaderContainer nav ul li:hover {
+            background: var(--hover-background);
+            color: var(--text-color); }
+          .header .mainHeaderContainer nav ul li.activePage {
+            font-weight: 500; }
+          .header .mainHeaderContainer nav ul li button {
+            cursor: pointer;
+            width: max-content;
+            height: max-content;
+            background-color: transparent;
+            outline: none;
+            border: none;
+            display: flex;
+            flex-direction: row;
+            align-items: center; }
+            .header .mainHeaderContainer nav ul li button svg {
+              transition: 1s all;
+              height: 22px;
+              width: 22px;
+              padding: 0;
+              margin: 0;
+              fill: var(--google-primary-color); }
+    .header .mainHeaderContainer .extraCenteringDiv {
+      display: none; }
+      .header .mainHeaderContainer .extraCenteringDiv button {
+        cursor: pointer;
+        width: max-content;
+        height: max-content;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center; }
+        .header .mainHeaderContainer .extraCenteringDiv button svg {
+          transition: 1s all;
+          height: 22px;
+          width: 22px;
+          padding: 0;
+          margin: 0;
+          fill: var(--google-primary-color); }
 
 @media screen and (max-width: 1300px) {
   .header {
-    width: 100%;
-  }
-  .header .mainHeaderContainer {
-    width: 100%;
-  }
-}
-
+    width: 100%; }
+    .header .mainHeaderContainer {
+      width: 100%; } }
 @media screen and (max-width: 1000px) {
   .header {
-    width: 100%;
-  }
-  .header .mainHeaderContainer {
-    width: 100%;
-  }
-  .header .mainHeaderContainer .headerHamburgerMenuIcon {
-    display: block;
-  }
-  .header .mainHeaderContainer nav {
-    position: absolute;
-    top: 55px;
-    left: -1001px;
-    z-index: 90;
-    width: 100%;
-    background: var(--background);
-  }
-  .header .mainHeaderContainer nav ul {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding: 0;
-    margin: 0;
-  }
-  .header .mainHeaderContainer nav ul li {
-    text-align: start;
-    width: 100%;
-  }
-  .header .mainHeaderContainer nav ul li a {
-    text-align: start;
-    background: yellow;
-    background: var(--background);
-    border-bottom: 0.6px solid var(--border);
-    padding: 9px 24px;
-  }
-  .header .mainHeaderContainer nav ul li a:nth-child(1) {
-    border-top: 0.6px solid var(--border);
-  }
-  .header .mainHeaderContainer nav ul li a:hover {
-    background: var(--hover-background);
-  }
-  .header .mainHeaderContainer nav ul li button {
-    display: none;
-  }
-  .header .mainHeaderContainer nav.menuActive {
-    top: 55px;
-    left: 0;
-  }
-  .header .mainHeaderContainer .extraCenteringDiv {
-    display: block;
-  }
-}
-
+    width: 100%; }
+    .header .mainHeaderContainer {
+      width: 100%; }
+      .header .mainHeaderContainer .headerHamburgerMenuIcon {
+        display: block; }
+      .header .mainHeaderContainer nav {
+        position: absolute;
+        top: 55px;
+        left: -1001px;
+        z-index: 90;
+        width: 100%;
+        background: var(--background); }
+        .header .mainHeaderContainer nav ul {
+          flex-direction: column;
+          padding: 0;
+          margin: 0; }
+          .header .mainHeaderContainer nav ul li {
+            text-align: start;
+            width: 100%; }
+            .header .mainHeaderContainer nav ul li a {
+              text-align: start;
+              background: yellow;
+              background: var(--background);
+              border-bottom: 0.6px solid var(--border);
+              padding: 9px 24px; }
+              .header .mainHeaderContainer nav ul li a:nth-child(1) {
+                border-top: 0.6px solid var(--border); }
+              .header .mainHeaderContainer nav ul li a:hover {
+                background: var(--hover-background); }
+            .header .mainHeaderContainer nav ul li button {
+              display: none; }
+        .header .mainHeaderContainer nav.menuActive {
+          top: 55px;
+          left: 0; }
+      .header .mainHeaderContainer .extraCenteringDiv {
+        display: block; } }
 @media screen and (max-width: 700px) {
   .header {
-    width: 100%;
-  }
-  .header .mainHeaderContainer {
-    width: 100%;
-  }
-  .header .mainHeaderContainer .headerHamburgerMenuIcon {
-    display: block;
-  }
-  .header .mainHeaderContainer .logoSpan a p span:nth-child(1) {
-    display: none;
-  }
-  .header .mainHeaderContainer .logoSpan a p span:nth-child(2) {
-    display: block;
-  }
-  .header .mainHeaderContainer .logoSpan a p span:nth-child(3) {
-    display: none;
-  }
-}
+    width: 100%; }
+    .header .mainHeaderContainer {
+      width: 100%; }
+      .header .mainHeaderContainer .headerHamburgerMenuIcon {
+        display: block; }
+      .header .mainHeaderContainer .logoSpan a p span:nth-child(1) {
+        display: none; }
+      .header .mainHeaderContainer .logoSpan a p span:nth-child(2) {
+        display: block; }
+      .header .mainHeaderContainer .logoSpan a p span:nth-child(3) {
+        display: none; } }
+
 /*# sourceMappingURL=index.module.css.map */

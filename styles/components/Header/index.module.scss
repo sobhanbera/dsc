@@ -10,7 +10,7 @@
     display: block;
     background-color: var(--background);
     // background-color: var(--google-blue-color);
-    overflow: hidden;
+    // overflow: hidden;
 
     &.scrolled {
         box-shadow: 0 0 8px var(--common-shadow);
@@ -52,6 +52,7 @@
                     justify-content: flex-start;
                     align-items: flex-start;
                     padding: 0 3px;
+                    margin: 0;
 
                     span {
                         padding: 0 3px;
@@ -84,6 +85,7 @@
 
         nav {
             transition: 0.5s left;
+            background-color: transparent;
 
             ul {
                 display: flex;
