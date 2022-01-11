@@ -18,4 +18,8 @@ export const CONTACT_AREA_NAME = 'Khushboo Agnihotri'
 export const CONTACT_AREA_POSTITION = 'Lead - GDSC GHRCE'
 export const CONTACT_AREA_PROVIDED = 'Email'
 
+export const MEDIUM_BLOG_API_LINK = 'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/dsc-ghrce'
+
 export const HEADER_HEIGHT = 55
+
+export const MONTHS_LIST = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
