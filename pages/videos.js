@@ -76,15 +76,13 @@ export default function Videos() {
             })
     }, [])
 
-    const search = () => {}
-
     return (
         <div className={styles.videosPage}>
             <h1>Videos</h1>
 
             <div className={styles.mainVideosContainer}>
                 <div className={styles.searchBarContainer}>
-                    <SearchBar searchText={searchText} setSearch={setSearch} search={search} />
+                    <SearchBar searchText={searchText} setSearch={setSearch} />
                 </div>
 
                 {videos[0].id.length > 0 ? (
@@ -104,7 +102,7 @@ export default function Videos() {
     )
 }
 
-function VideoCard({video, index}) {
+function VideoCard({video, onClick}) {
     const [description, setDescription] = useState('')
     const title = shortenText(video.title + '', 60)
 
@@ -125,7 +123,7 @@ function VideoCard({video, index}) {
     }, [video.id])
 
     return (
-        <div className={styles.videoCard} key={`${video.id}${index}`}>
+        <div className={styles.videoCard}>
             <div className={styles.imageSection}>
                 <img src={video.bestThumbnail.url} alt="video thumbnail" />
             </div>
