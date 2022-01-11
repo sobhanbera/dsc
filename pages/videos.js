@@ -1,9 +1,10 @@
-import React, {useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 
 import styles from '../styles/pages/videos/index.module.css'
-import {SearchBar, Loading} from '../components'
-import {shortenText} from '../utils'
+import { SearchBar, Loading, RedirectButton } from '../components'
+import { shortenText } from '../utils'
+import { YOUTUBE_CHANNEL_LINK } from '../constants'
 
 // This page will render a list of youtube videos
 // It will also render a search bar
@@ -76,6 +77,10 @@ export default function Videos() {
             })
     }, [])
 
+    const redirectTo = (website = '') => {
+        window.open(website, '_blank')
+    }
+
     return (
         <div className={styles.videosPage}>
             <h1>Videos</h1>
@@ -91,18 +96,20 @@ export default function Videos() {
                             // implementing the search feature
                             if (video.title.toLowerCase().indexOf(searchText.toLowerCase()) <= -1) return null
 
-                            return <VideoCard key={`${video.id}${_}`} video={video} index={_} />
+                            return <VideoCard key={`${video.id}${_}`} video={video} onClick={() => redirectTo(video.url)} index={_} />
                         })}
                     </div>
                 ) : (
                     <Loading />
                 )}
             </div>
+
+            <RedirectButton link={YOUTUBE_CHANNEL_LINK} title={"Watch More"} />
         </div>
     )
 }
 
-function VideoCard({video, onClick}) {
+function VideoCard({ video, onClick }) {
     const [description, setDescription] = useState('')
     const title = shortenText(video.title + '', 60)
 
@@ -119,11 +126,11 @@ function VideoCard({video, onClick}) {
                     if (res.data.data.videoDescription) setDescription(res.data.data.videoDescription)
                 }
             })
-            .catch(err => {})
+            .catch(err => { })
     }, [video.id])
 
     return (
-        <div className={styles.videoCard}>
+        <div className={styles.videoCard} onClick={onClick}>
             <div className={styles.imageSection}>
                 <img src={video.bestThumbnail.url} alt="video thumbnail" />
             </div>

@@ -1,10 +1,10 @@
-import React, {useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 
 import styles from '../styles/pages/Blogs/index.module.css'
-import {Loading, SearchBar} from '../components'
-import {MEDIUM_BLOG_API_LINK} from '../constants'
-import {getFormattedDate, shortenText} from '../utils'
+import { Loading, RedirectButton, SearchBar } from '../components'
+import { MEDIUM_BLOG_API_LINK, MEDIUM_PAGE } from '../constants'
+import { getFormattedDate, shortenText } from '../utils'
 
 const DemoBlog = {
     title: '',
@@ -30,8 +30,12 @@ export default function Blogs() {
                     setBlogs(res.data.items)
                 }
             })
-            .catch(err => {})
+            .catch(err => { })
     })
+
+    const redirectTo = (website = '') => {
+        window.open(website, '_blank')
+    }
 
     return (
         <div className={styles.blogsPage}>
@@ -47,7 +51,7 @@ export default function Blogs() {
                         {blogs.map((blog, _) => {
                             // implementing the search feature
                             if (blog.title.toLowerCase().indexOf(searchText.toLowerCase()) > -1 || blog.author.toLowerCase().indexOf(searchText.toLowerCase()) > -1) {
-                                return <BlogCard key={`${_}`} blog={blog} setSearchText={setSearch} index={_} />
+                                return <BlogCard key={`${_}`} blog={blog} setSearchText={setSearch} onClick={() => redirectTo(blog.link)} index={_} />
                             }
                             return null
                         })}
@@ -56,15 +60,17 @@ export default function Blogs() {
                     <Loading />
                 )}
             </div>
+
+            <RedirectButton link={MEDIUM_PAGE} title={"Read More..."} />
         </div>
     )
 }
 
-function BlogCard({blog, onClick, setSearchText}) {
+function BlogCard({ blog, onClick, setSearchText }) {
     const formattedUploadTime = getFormattedDate(blog.pubDate)
 
     return (
-        <div className={styles.blogCard}>
+        <div className={styles.blogCard} onClick={onClick}>
             <div className={styles.imageSection}>
                 <img src={blog.thumbnail} alt="blog thumbnail" />
             </div>
