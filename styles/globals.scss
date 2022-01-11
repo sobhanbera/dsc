@@ -99,6 +99,14 @@ body {
     color: var(--text-color);
 }
 
+a {
+    color: var(--text-color);
+
+    &:hover {
+        color: var(--google-primary-color);
+    }
+}
+
 .main-content {
     min-height: 75vh;
 }
