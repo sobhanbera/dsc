@@ -3,7 +3,7 @@
  * which will be required througout the website
  */
 
-import { randomElementOfArray } from "../utils"
+import {randomElementOfArray} from '../utils'
 
 export const GOOGLE_COLORS = {
     BLUE: '#4285F4',
