@@ -76,7 +76,11 @@ function EventCard({eventData, onClick, setSearch}) {
 
                 <div className={styles.tags}>
                     {eventData.tags.map(tag => {
-                        return <span onClick={e => localTagging(e, tag)}>{tag}</span>
+                        return (
+                            <span key={tag} onClick={e => localTagging(e, tag)}>
+                                {tag}
+                            </span>
+                        )
                     })}
                 </div>
                 <p>
