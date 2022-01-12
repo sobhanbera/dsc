@@ -232,6 +232,7 @@
                     flex-direction: column;
                     // justify-content: center;
                     max-height: 600px;
+                    width: max-content;
 
                     .videoDetail {
                         p {
@@ -251,6 +252,14 @@
         }
 
         .videoPlayer {
+            .videoPlayerTop {
+                a {
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
+
             .videoPlayerVideoArea {
                 iframe {
                     width: 450px;
@@ -264,6 +273,14 @@
 @media screen and (max-width: 500px) {
     .videosPage {
         .videoPlayer {
+            .videoPlayerTop {
+                a {
+                    p {
+                        font-size: 14px;
+                    }
+                }
+            }
+
             .videoPlayerVideoArea {
                 iframe {
                     width: 95%;

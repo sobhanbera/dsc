@@ -162,7 +162,7 @@ function VideoPlayer({ video, clearVideo }) {
     return (
         <div className={`${styles.videoPlayer} ${video.id.length > 0 ? styles.active : styles.inactive}`}>
             <div className={styles.videoPlayerTop}>
-                <a href={video.url} target="_blank"><p><AiOutlineLink />{video.title}</p></a>
+                <a href={video.url} target="_blank" rel="noreferrer"><p><AiOutlineLink />{video.title}</p></a>
                 <VscClose onClick={clearVideo} />
             </div>
 

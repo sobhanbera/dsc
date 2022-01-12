@@ -138,7 +138,8 @@
 @media screen and (max-width: 700px) {
   .videosPage .mainVideosContainer .videosContainer .videoCard {
     flex-direction: column;
-    max-height: 600px; }
+    max-height: 600px;
+    width: max-content; }
     .videosPage .mainVideosContainer .videosContainer .videoCard .videoDetail p {
       padding: 10px 0; }
       .videosPage .mainVideosContainer .videosContainer .videoCard .videoDetail p:nth-child(2) {
@@ -146,10 +147,14 @@
         color: var(--text-color-light);
         font-weight: 300;
         font-size: 16px; }
+  .videosPage .videoPlayer .videoPlayerTop a p {
+    font-size: 16px; }
   .videosPage .videoPlayer .videoPlayerVideoArea iframe {
     width: 450px;
     height: 252px; } }
 @media screen and (max-width: 500px) {
+  .videosPage .videoPlayer .videoPlayerTop a p {
+    font-size: 14px; }
   .videosPage .videoPlayer .videoPlayerVideoArea iframe {
     width: 95%;
     height: 250px; } }
