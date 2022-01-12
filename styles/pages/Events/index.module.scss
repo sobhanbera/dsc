@@ -17,11 +17,14 @@
         justify-content: center;
 
         h1 {
-            font-size: 24px;
             text-align: center;
+            text-decoration: underline;
             padding-top: 15px;
             padding-bottom: 7px;
-            text-decoration: underline;
+
+            a {
+                font-size: 24px;
+            }
         }
 
         .eventsContainer {

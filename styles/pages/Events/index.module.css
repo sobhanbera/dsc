@@ -35,11 +35,14 @@
 }
 
 .eventsPage .mainEventsContainer h1 {
-  font-size: 24px;
   text-align: center;
+  text-decoration: underline;
   padding-top: 15px;
   padding-bottom: 7px;
-  text-decoration: underline;
+}
+
+.eventsPage .mainEventsContainer h1 a {
+  font-size: 24px;
 }
 
 .eventsPage .mainEventsContainer .eventsContainer {

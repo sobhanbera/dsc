@@ -24,7 +24,9 @@ export default function Events() {
                     <SearchBar searchText={searchText} setSearch={setSearch} />
                 </div>
 
-                <h1>On-Going Events</h1>
+                <h1 id="ongoings">
+                    <a href="#ongoings">On-Going Events</a>
+                </h1>
 
                 <div className={styles.eventsContainer}>
                     <EventCard
@@ -37,7 +39,9 @@ export default function Events() {
                     />
                 </div>
 
-                <h1>Past Events</h1>
+                <h1 id="pastevents">
+                    <a href="#pastevents">Past Events</a>
+                </h1>
 
                 <div className={styles.eventsContainer}>
                     {EventsList.map((event, _) => {
