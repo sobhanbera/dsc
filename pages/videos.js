@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import { VscClose } from 'react-icons/vsc'
+import { AiOutlineLink } from 'react-icons/ai'
 
 import styles from '../styles/pages/videos/index.module.css'
 import { SearchBar, Loading, RedirectButton } from '../components'
@@ -59,9 +61,12 @@ const DemoVideoData = {
 }
 
 export default function Videos() {
-    const [videos, setVideos] = useState([DemoVideoData])
-    const [searchText, setSearch] = useState('')
+    const [videos, setVideos] = useState([DemoVideoData]) // the videos list will go here...
+    const [searchText, setSearch] = useState('') // the search text
+    // if the value of the id of video is null of empty then don't show the video else show the video and play it in
+    const [showVideo, setShowVideo] = useState(DemoVideoData) // to show video or not and which video to show
 
+    // fetching the videos list from api and setting the values to show to the end user...
     React.useEffect(() => {
         axios
             .get('/api/videos')
@@ -69,6 +74,7 @@ export default function Videos() {
                 if (res.error) {
                     console.log('error occured')
                 } else {
+                    // setting the videos to the state
                     setVideos(res.data.data.items)
                 }
             })
@@ -77,8 +83,12 @@ export default function Videos() {
             })
     }, [])
 
-    const redirectTo = (website = '') => {
-        window.open(website, '_blank')
+    /**
+    * helps to launch a interface which will play a certain video based on the input data
+    * @param {VideoData} video videos data which is to be opened in the window itself
+    **/
+    const launchVideo = (video = DemoVideoData) => {
+        setShowVideo(video)
     }
 
     return (
@@ -96,7 +106,7 @@ export default function Videos() {
                             // implementing the search feature
                             if (video.title.toLowerCase().indexOf(searchText.toLowerCase()) <= -1) return null
 
-                            return <VideoCard key={`${video.id}${_}`} video={video} onClick={() => redirectTo(video.url)} index={_} />
+                            return <VideoCard key={`${video.id}${_}`} video={video} onClick={() => launchVideo(video)} index={_} />
                         })}
                     </div>
                 ) : (
@@ -105,6 +115,8 @@ export default function Videos() {
             </div>
 
             <RedirectButton link={YOUTUBE_CHANNEL_LINK} title={"Watch More"} />
+
+            <VideoPlayer video={showVideo} clearVideo={() => setShowVideo(DemoVideoData)} />
         </div>
     )
 }
@@ -140,5 +152,33 @@ function VideoCard({ video, onClick }) {
                 {description.length > 1 ? <p>{shortenText(description + '', 150)}</p> : null}
             </div>
         </div>
+    )
+}
+
+function VideoPlayer({ video, clearVideo }) {
+    // console.log(`https://www.youtube.com/embed/${video.id}?autoplay=1&loop=1`)
+    console.log(video.title, video.id)
+
+    return (
+        <div className={`${styles.videoPlayer} ${video.id.length > 0 ? styles.active : styles.inactive}`}>
+            <div className={styles.videoPlayerTop}>
+                <a href={video.url} target="_blank" rel="noreferrer"><p><AiOutlineLink />{video.title}</p></a>
+                <VscClose onClick={clearVideo} />
+            </div>
+
+            <div className={styles.videoPlayerVideoArea} onClick={clearVideo}>
+                <iframe
+                    // width="712"
+                    // height="500"
+                    src={`https://www.youtube.com/embed/${video.id}?autoplay=1&loop=1`}
+                    title={video.title}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen>
+                </iframe>
+            </div>
+
+            <div className={styles.videoPlayerBottom}></div>
+        </div >
     )
 }

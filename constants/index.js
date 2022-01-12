@@ -3,7 +3,7 @@
  * which will be required througout the website
  */
 
-import { randomElementOfArray } from '../utils'
+import {randomElementOfArray} from '../utils'
 
 export const GOOGLE_COLORS = {
     BLUE: '#4285F4',
@@ -21,6 +21,7 @@ export const CONTACT_AREA_PROVIDED = 'Email'
 export const MEDIUM_BLOG_API_LINK = 'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/dsc-ghrce'
 export const MEDIUM_PAGE = 'https://medium.com/dsc-ghrce'
 export const YOUTUBE_CHANNEL_LINK = 'https://www.youtube.com/channel/UCzhxiXjcnIgMX3ALSOsQBmw'
+export const GDSC_GHRCE_OFFICIAL_DSC_PAGE = 'https://gdsc.community.dev/gh-raisoni-college-of-engineering-nagpur/'
 
 export const HEADER_HEIGHT = 55
 

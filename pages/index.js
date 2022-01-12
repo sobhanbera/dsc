@@ -1,11 +1,11 @@
-import { useEffect, useState } from 'react'
+import {useEffect, useState} from 'react'
 import Head from 'next/head'
-import { useInView } from 'react-intersection-observer'
+import {useInView} from 'react-intersection-observer'
 
-import { GOOGLE_COLORS } from '../constants'
+import {GOOGLE_COLORS} from '../constants'
 import axios from 'axios'
 
-function ColorTrigger({ changeColor, color }) {
+function ColorTrigger({changeColor, color}) {
     const [ref, inView] = useInView()
 
     useEffect(() => {
@@ -33,7 +33,7 @@ export default function LandingPage() {
 
     useEffect(() => {
         window.addEventListener('scroll', () => {
-            const { scrollY } = window
+            const {scrollY} = window
             if (scrollY > 0 && scrollY < 160) {
                 setBackgroundColor('#FFFFFF')
             } else if (scrollY > 160 && scrollY < 1170) {

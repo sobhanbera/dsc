@@ -81,7 +81,7 @@ function BlogCard({ blog, onClick, setSearchText }) {
 
                 <p>{blog.title}</p>
                 <p>
-                    <a href={blog.link}>Read The Blog...</a>
+                    <a href={blog.link} target="_blank" rel="noreferrer">Read The Blog...</a>
                 </p>
 
                 <div className={styles.categoriesList}>
