@@ -22,7 +22,7 @@ export default function OurTeam() {
                         // implementing the search feature
                         if (teamMember.name.toLowerCase().indexOf(searchText.toLowerCase()) <= -1) return null
 
-                        return <TeamCard key={`${teamMember.id}${_}`} memberData={teamMember} />
+                        return <TeamCard key={`${teamMember.name}${_}`} memberData={teamMember} />
                     })}
                 </div>
             </div>
