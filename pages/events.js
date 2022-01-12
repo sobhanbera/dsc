@@ -4,7 +4,7 @@ import htmlParser from 'html-react-parser'
 import {VscClose} from 'react-icons/vsc'
 
 import styles from '../styles/pages/Events/index.module.css'
-import EventsList from '../constants/events'
+import EventsList, {CurrentEvent} from '../constants/events'
 import {RedirectButton, SearchBar} from '../components'
 import {GDSC_GHRCE_OFFICIAL_DSC_PAGE} from '../constants'
 import {shortenText} from '../utils'
@@ -23,6 +23,25 @@ export default function Events() {
                 <div className={styles.searchBarContainer}>
                     <SearchBar searchText={searchText} setSearch={setSearch} />
                 </div>
+
+                <h1 id="ongoings">
+                    <a href="#ongoings">On-Going Events</a>
+                </h1>
+
+                <div className={styles.eventsContainer}>
+                    <EventCard
+                        eventData={CurrentEvent}
+                        setSearch={setSearch}
+                        onClick={() => {
+                            setShowEvent(CurrentEvent)
+                            setShowEventBool(true)
+                        }}
+                    />
+                </div>
+
+                <h1 id="pastevents">
+                    <a href="#pastevents">Past Events</a>
+                </h1>
 
                 <div className={styles.eventsContainer}>
                     {EventsList.map((event, _) => {
