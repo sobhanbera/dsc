@@ -34,6 +34,17 @@
           justify-content: center;
 }
 
+.eventsPage .mainEventsContainer h1 {
+  text-align: center;
+  text-decoration: underline;
+  padding-top: 15px;
+  padding-bottom: 7px;
+}
+
+.eventsPage .mainEventsContainer h1 a {
+  font-size: 24px;
+}
+
 .eventsPage .mainEventsContainer .eventsContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -196,8 +207,8 @@
   max-width: 600px;
   padding: 5px 6px 10px;
   border-radius: 9px;
-  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 0px 20px rgba(var(--shadow-rgb), 0.25);
+          box-shadow: 0px 0px 20px rgba(var(--shadow-rgb), 0.25);
 }
 
 .eventsPage .eventDescription .eventDescriptionCard .eventDescriptionHeader {
@@ -277,13 +288,15 @@
 }
 
 .eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent p,
-.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent span {
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent span,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent * {
   background-color: transparent;
   padding: 7px 0;
 }
 
 .eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent p a,
-.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent span a {
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent span a,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent * a {
   color: var(--text-color);
 }
 
@@ -292,12 +305,16 @@
 .eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent p a u,
 .eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent span a b,
 .eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent span a i,
-.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent span a u {
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent span a u,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent * a b,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent * a i,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent * a u {
   background-color: transparent;
 }
 
 .eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent p a:hover,
-.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent span a:hover {
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent span a:hover,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent * a:hover {
   color: var(--google-primary-color);
 }
 
@@ -306,7 +323,10 @@
 .eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent p u,
 .eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent span b,
 .eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent span i,
-.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent span u {
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent span u,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent * b,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent * i,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent * u {
   background-color: transparent;
 }
 
