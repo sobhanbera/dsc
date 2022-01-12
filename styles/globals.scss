@@ -23,12 +23,15 @@
 
     --theme-color: #ffffff;
     --theme-invert-color: #000000;
+    --theme-color-rgb: 255, 255, 255;
+    --theme-invert-color-rgb: 0, 0, 0;
 
     --text-color: #151515;
     --text-color-light: #505050;
     --common-shadow: #7f7f7f50;
 
     --background: #ffffff;
+    --background-rgb: 255, 255, 255;
     --hover-background: #efefef;
 
     --border: #d7d7d7;
@@ -43,12 +46,15 @@
 
     --theme-color: #000000;
     --theme-invert-color: #ffffff;
+    --theme-color-rgb: 0, 0, 0;
+    --theme-invert-color-rgb: 255, 255, 255;
 
     --text-color: #efefef;
     --text-color-light: #dfdfdf;
     --common-shadow: #7f7f7f50;
 
     --background: #151515;
+    --background-rgb: 21, 21, 21;
     --hover-background: #272727;
 
     --border: #353535;
@@ -78,7 +84,7 @@
 
 * {
     box-sizing: border-box;
-    transition: 0.35s all;
+    transition: 0.3s all;
     padding: 0;
     margin: 0;
 
@@ -99,6 +105,66 @@ body {
     font-size: 18px;
     background-color: var(--background);
     color: var(--text-color);
+
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+    // &::-webkit-scrollbar-track {
+    // }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 100px;
+    }
+
+    // we have to do it since the variables are not in use
+    &.blue {
+        &::-webkit-scrollbar {
+            background-color: #ffffff; // the actual background color
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: #4285f4;
+            border-radius: 100px;
+        }
+    }
+
+    &.red {
+        &::-webkit-scrollbar {
+            background-color: #ffffff;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: #db4437;
+            border-radius: 100px;
+        }
+    }
+
+    &.green {
+        &::-webkit-scrollbar {
+            background-color: #ffffff;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: #0f9d58;
+            border-radius: 100px;
+        }
+    }
+
+    &.yellow {
+        &::-webkit-scrollbar {
+            background-color: #ffffff;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: #f4b400;
+            border-radius: 100px;
+        }
+    }
+
+    &.white {
+        &::-webkit-scrollbar {
+            background-color: #151515; // the actual background color
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: #ffffff;
+            border-radius: 100px;
+        }
+    }
 }
 
 a {

@@ -6,11 +6,14 @@
   --instagram: #fb3958;
   --linkedin: #0a66c2;
   --twitter: #1da1f2;
-  --youtube: #c4302b; }
+  --youtube: #c4302b;
+}
 
 @font-face {
   font-family: Google-Sans;
-  src: url(../public/fonts/ProductSans-Regular.ttf); }
+  src: url(../public/fonts/ProductSans-Regular.ttf);
+}
+
 .light-theme {
   --google-blue-color: #4285f4;
   --google-red-color: #db4437;
@@ -18,13 +21,17 @@
   --google-green-color: #0f9d58;
   --theme-color: #ffffff;
   --theme-invert-color: #000000;
+  --theme-color-rgb: 255, 255, 255;
+  --theme-invert-color-rgb: 0, 0, 0;
   --text-color: #151515;
   --text-color-light: #505050;
   --common-shadow: #7f7f7f50;
   --background: #ffffff;
+  --background-rgb: 255, 255, 255;
   --hover-background: #efefef;
   --border: #d7d7d7;
-  --svg-color: #101010; }
+  --svg-color: #101010;
+}
 
 .dark-theme {
   --google-blue-color: #ffffff;
@@ -33,37 +40,48 @@
   --google-green-color: #ffffff;
   --theme-color: #000000;
   --theme-invert-color: #ffffff;
+  --theme-color-rgb: 0, 0, 0;
+  --theme-invert-color-rgb: 255, 255, 255;
   --text-color: #efefef;
   --text-color-light: #dfdfdf;
   --common-shadow: #7f7f7f50;
   --background: #151515;
+  --background-rgb: 21, 21, 21;
   --hover-background: #272727;
   --border: #353535;
-  --svg-color: #f7f7f7; }
+  --svg-color: #f7f7f7;
+}
 
 .red {
   --google-primary-color: #db4437;
-  --google-primary-color-rgb: 219, 68, 55; }
+  --google-primary-color-rgb: 219, 68, 55;
+}
 
 .blue {
   --google-primary-color: #4285f4;
-  --google-primary-color-rgb: 66, 133, 244; }
+  --google-primary-color-rgb: 66, 133, 244;
+}
 
 .green {
   --google-primary-color: #0f9d58;
-  --google-primary-color-rgb: 15, 157, 88; }
+  --google-primary-color-rgb: 15, 157, 88;
+}
 
 .yellow {
   --google-primary-color: #f4b400;
-  --google-primary-color-rgb: 244, 180, 0; }
+  --google-primary-color-rgb: 244, 180, 0;
+}
 
 .white {
   --google-primary-color: #ffffff;
-  --google-primary-color-rgb: 255, 255, 255; }
+  --google-primary-color-rgb: 255, 255, 255;
+}
 
 * {
-  box-sizing: border-box;
-  transition: 0.35s all;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
   padding: 0;
   margin: 0;
   outline: none;
@@ -72,7 +90,8 @@
   text-decoration: none;
   font-size: 18px;
   color: var(--text-color);
-  background: var(--background); }
+  background: var(--background);
+}
 
 body {
   padding: 0;
@@ -80,14 +99,71 @@ body {
   font-family: Karla, Roboto, Ubuntu, sans-serif;
   font-size: 18px;
   background-color: var(--background);
-  color: var(--text-color); }
+  color: var(--text-color);
+}
+
+body::-webkit-scrollbar {
+  width: 6px;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+}
+
+body.blue::-webkit-scrollbar {
+  background-color: #ffffff;
+}
+
+body.blue::-webkit-scrollbar-thumb {
+  background-color: #4285f4;
+  border-radius: 100px;
+}
+
+body.red::-webkit-scrollbar {
+  background-color: #ffffff;
+}
+
+body.red::-webkit-scrollbar-thumb {
+  background-color: #db4437;
+  border-radius: 100px;
+}
+
+body.green::-webkit-scrollbar {
+  background-color: #ffffff;
+}
+
+body.green::-webkit-scrollbar-thumb {
+  background-color: #0f9d58;
+  border-radius: 100px;
+}
+
+body.yellow::-webkit-scrollbar {
+  background-color: #ffffff;
+}
+
+body.yellow::-webkit-scrollbar-thumb {
+  background-color: #f4b400;
+  border-radius: 100px;
+}
+
+body.white::-webkit-scrollbar {
+  background-color: #151515;
+}
+
+body.white::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+  border-radius: 100px;
+}
 
 a {
-  color: var(--text-color); }
-  a:hover {
-    color: var(--google-primary-color); }
+  color: var(--text-color);
+}
+
+a:hover {
+  color: var(--google-primary-color);
+}
 
 .main-content {
-  min-height: 75vh; }
-
+  min-height: 75vh;
+}
 /*# sourceMappingURL=globals.css.map */
