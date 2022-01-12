@@ -39,6 +39,11 @@
                 justify-content: flex-start;
                 align-items: center;
 
+                &:hover {
+                    border: 1px solid var(--google-primary-color);
+                    box-shadow: 0px 2px 0px rgba(var(--google-primary-color-rgb), 0.5);
+                }
+
                 .artwork {
                     img {
                         border-radius: 5px;
