@@ -1,0 +1,125 @@
+.secretFeature {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #00000050;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.5s top ease;
+  transition: 0.5s top ease;
+  padding-bottom: 55px;
+}
+
+.secretFeature.active {
+  left: 0;
+  top: 55px;
+}
+
+.secretFeature.inactive {
+  left: 0;
+  top: -100%;
+}
+
+.secretFeature .secretFeatureCard {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: rgba(var(--background-rgb), 1);
+  cursor: pointer;
+  margin: 10px;
+  padding: 15px 15px;
+  border-radius: 5px;
+  border: 1px solid var(--border);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.secretFeature .secretFeatureCard form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: transparent;
+}
+
+.secretFeature .secretFeatureCard form input {
+  background-color: rgba(var(--background-rgb), 0.75);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  min-width: 330px;
+  width: 400px;
+  min-width: 200px;
+  height: 40px;
+  -webkit-box-flex: 3;
+      -ms-flex-positive: 3;
+          flex-grow: 3;
+  padding: 0 16px 0 16px;
+  margin: 10px 5px;
+  font-size: 15px;
+  font-family: Karla;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+.secretFeature .secretFeatureCard form input:focus {
+  border: 1px solid var(--google-primary-color);
+}
+
+@media screen and (max-width: 520px) {
+  .secretFeature .secretFeatureCard {
+    width: 93%;
+  }
+  .secretFeature .secretFeatureCard form {
+    width: 100%;
+  }
+  .secretFeature .secretFeatureCard form input {
+    min-width: 330px;
+    width: 100%;
+    min-width: 200px;
+    height: 40px;
+    -webkit-box-flex: 3;
+        -ms-flex-positive: 3;
+            flex-grow: 3;
+    padding: 0 16px 0 16px;
+    margin: 10px 5px;
+    font-size: 15px;
+    font-family: Karla;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+  }
+  .secretFeature .secretFeatureCard form input:focus {
+    border: 1px solid var(--google-primary-color);
+  }
+}
+/*# sourceMappingURL=index.module.css.map */
