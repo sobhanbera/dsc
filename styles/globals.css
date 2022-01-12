@@ -6,14 +6,11 @@
   --instagram: #fb3958;
   --linkedin: #0a66c2;
   --twitter: #1da1f2;
-  --youtube: #c4302b;
-}
+  --youtube: #c4302b; }
 
 @font-face {
   font-family: Google-Sans;
-  src: url(../public/fonts/ProductSans-Regular.ttf);
-}
-
+  src: url(../public/fonts/ProductSans-Regular.ttf); }
 .light-theme {
   --google-blue-color: #4285f4;
   --google-red-color: #db4437;
@@ -27,8 +24,7 @@
   --background: #ffffff;
   --hover-background: #efefef;
   --border: #d7d7d7;
-  --svg-color: #101010;
-}
+  --svg-color: #101010; }
 
 .dark-theme {
   --google-blue-color: #ffffff;
@@ -43,47 +39,40 @@
   --background: #151515;
   --hover-background: #272727;
   --border: #353535;
-  --svg-color: #f7f7f7;
-}
+  --svg-color: #f7f7f7; }
 
 .red {
   --google-primary-color: #db4437;
-  --google-primary-color-rgb: 219, 68, 55;
-}
+  --google-primary-color-rgb: 219, 68, 55; }
 
 .blue {
   --google-primary-color: #4285f4;
-  --google-primary-color-rgb: 66, 133, 244;
-}
+  --google-primary-color-rgb: 66, 133, 244; }
 
 .green {
   --google-primary-color: #0f9d58;
-  --google-primary-color-rgb: 15, 157, 88;
-}
+  --google-primary-color-rgb: 15, 157, 88; }
 
 .yellow {
   --google-primary-color: #f4b400;
-  --google-primary-color-rgb: 244, 180, 0;
-}
+  --google-primary-color-rgb: 244, 180, 0; }
 
 .white {
   --google-primary-color: #ffffff;
-  --google-primary-color-rgb: 255, 255, 255;
-}
+  --google-primary-color-rgb: 255, 255, 255; }
 
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-transition: 0.35s all;
+  box-sizing: border-box;
   transition: 0.35s all;
+  padding: 0;
+  margin: 0;
   outline: none;
   list-style: none;
   list-style-type: none;
   text-decoration: none;
   font-size: 18px;
   color: var(--text-color);
-  background: var(--background);
-}
+  background: var(--background); }
 
 body {
   padding: 0;
@@ -91,18 +80,14 @@ body {
   font-family: Karla, Roboto, Ubuntu, sans-serif;
   font-size: 18px;
   background-color: var(--background);
-  color: var(--text-color);
-}
+  color: var(--text-color); }
 
 a {
-  color: var(--text-color);
-}
-
-a:hover {
-  color: var(--google-primary-color);
-}
+  color: var(--text-color); }
+  a:hover {
+    color: var(--google-primary-color); }
 
 .main-content {
-  min-height: 75vh;
-}
+  min-height: 75vh; }
+
 /*# sourceMappingURL=globals.css.map */
