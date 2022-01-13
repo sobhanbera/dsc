@@ -1,0 +1,126 @@
+.socialLinkCard {
+  padding: 10px 0 0 0;
+  margin: 12px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  min-width: 285px;
+  max-width: 400px;
+  width: 350px;
+  overflow: hidden;
+}
+
+.socialLinkCard p {
+  max-width: 380px;
+  font-size: 18px;
+  text-align: center;
+  padding: 0px 12px 10px 12px;
+  background-color: unset;
+}
+
+.socialLinkCard p:nth-child(1) {
+  border-bottom: 1px solid var(--border);
+}
+
+.socialLinkCard p:nth-child(2) {
+  border: none;
+  padding: 10px 0;
+}
+
+.socialLinkCard p:nth-child(2) a {
+  background-color: transparent;
+  font-size: 16px;
+}
+
+.socialLinkCard .socialLinkCardPlatformIcon {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px;
+}
+
+.socialLinkCard .socialLinkCardPlatformIcon svg {
+  width: 30px;
+  height: 30px;
+}
+
+.socialLinkCard .socialLinkEditing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 15px;
+  border-top: 1px solid var(--border);
+}
+
+.socialLinkCard .socialLinkEditing span {
+  height: 100%;
+  width: 1px;
+  background-color: var(--background);
+  border-left: 1px solid var(--background);
+}
+
+.socialLinkCard .socialLinkEditing a {
+  background-color: transparent;
+  display: block;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.socialLinkCard .socialLinkEditing button {
+  padding: 10px 15px;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.socialLinkCard .socialLinkEditing button svg {
+  background-color: transparent;
+}
+
+.socialLinkCard .socialLinkEditing button:hover {
+  background-color: var(--background);
+}
+
+@media screen and (max-width: 400px) {
+  .socialLinkCard {
+    min-width: 300px;
+    width: 300px;
+  }
+}
+/*# sourceMappingURL=index.module.css.map */

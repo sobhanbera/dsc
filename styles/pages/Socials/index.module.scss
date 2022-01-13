@@ -1,0 +1,23 @@
+.socialsPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px 0 30px 0;
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .linksAreaStarts {
+        max-width: 1200px;
+
+        .linksArea {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+    }
+}
