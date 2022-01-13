@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700;800&family=Poppins:wght@300;400;500&display=swap');
+
+
+.homeCard{
+    text-align:center;
+    margin:auto;
+    max-width:500px;
+    width:80vw;
+    color:white;
+    padding:20px 10px;
+    /* border:1px solid red; */
+}
+.heading{
+    font-size:2.1em;
+    color:Grey;
+}
+
+.btn{
+    width:185px;
+    height:50px;
+    background-color:white;
+    border-radius:5px;
+    font-size:18px;
+    border:none;
+}
+.btn:hover{
+    background-color:transparent;
+    border:2px solid white;
+    color:white;
+    cursor:pointer;
+}
+.para{
+    color:grey;
+    margin:30px auto;
+}
+.inp{
+    width:300px;
+    height:50px;
+    display:block;
+    text-align:center;
+    background:transparent;
+    border:1.5px solid white;
+    border-radius:5px;
+    color:white;
+    font-size:18px;
+    margin:30px auto;
+}
+.inp:focus{
+    outline:none;
+    border:2px solid white;
+}
