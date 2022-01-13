@@ -1,19 +1,21 @@
 import React from 'react'
-import {RiDeleteBin6Line} from 'react-icons/ri'
-import {AiOutlineEdit} from 'react-icons/ai'
+import { RiDeleteBin6Line } from 'react-icons/ri'
+import { AiOutlineEdit } from 'react-icons/ai'
 
 import styles from '../../styles/components/SocialLink/index.module.css'
-import {isColorBright, shortenText} from '../../utils'
-import {SocialPlatformsIconsData} from '../../constants/socials'
+import { isColorBright, shortenText } from '../../utils'
+import { SocialPlatformsIconsData } from '../../constants/socials'
 
-export default function AdminSocialLinkPreview({data, onEdit, onDelete}) {
-    const IconData = SocialPlatformsIconsData.filter(iconData => iconData.tag === data.iconTag)[0]?.Icon
+export default function AdminSocialLinkPreview({ data, onEdit, onDelete }) {
+    const IconData = SocialPlatformsIconsData.filter(iconData => iconData.tag === data.iconTag)
+    const hasIcon = IconData.length > 0
+    const Icon = IconData[0]?.Icon
 
     return (
         <div className={styles.socialLinkCard}>
             <p>{data.tag}</p>
             <div className={styles.socialLinkCardPlatformIcon}>
-                <IconData fill={data.color} />
+                {hasIcon ? <Icon fill={data.color} /> : null}
             </div>
 
             <p>

@@ -1,12 +1,12 @@
-import React, {useState, useEffect} from 'react'
-import {VscClose} from 'react-icons/vsc'
-import {getAuth} from 'firebase/auth'
-import {getDatabase, ref, update, set, remove, onValue} from 'firebase/database'
+import React, { useState, useEffect } from 'react'
+import { VscClose } from 'react-icons/vsc'
+import { getAuth } from 'firebase/auth'
+import { getDatabase, ref, update, set, remove, onValue } from 'firebase/database'
 
-import {SocialPlatformsIconsData} from '../../../constants/socials'
+import { SocialPlatformsIconsData } from '../../../constants/socials'
 import styles from '../../../styles/pages/Admin/LinkEdit/index.module.css'
-import {AdminSocialLinkPreview, SmallLoading, TextInput} from '../../../components'
-import {VALID_LINK_REGEX} from '../../../constants'
+import { AdminSocialLinkPreview, SmallLoading, TextInput } from '../../../components'
+import { VALID_LINK_REGEX } from '../../../constants'
 
 /**
  * a test data just to render the list
@@ -94,7 +94,6 @@ export default function AdminSideEdit() {
             if (data) {
                 // structuring the data
                 const values = Object.values(data)
-
                 setSocialLinks(values)
             }
         })
@@ -165,7 +164,7 @@ export default function AdminSideEdit() {
     const deleteLink = (linkData = '') => {
         if (window.confirm('Are you sure you want to delete the link from database. This operation is not reversible.')) {
             remove(ref(firebaseDatabase, '/links/' + linkData.timestamp))
-                .then(res => {})
+                .then(res => { })
                 .catch(err => {
                     alert("Couldn't delete the link currently...")
                 })
@@ -238,8 +237,8 @@ export default function AdminSideEdit() {
                     <div className={styles.linksArea}>
                         {socialLinks[0].link.length > 0
                             ? socialLinks.map(social => {
-                                  return <AdminSocialLinkPreview key={social.id} onEdit={() => editLink(social.id)} onDelete={() => deleteLink(social)} data={social} />
-                              })
+                                return <AdminSocialLinkPreview key={social.id} onEdit={() => editLink(social.id)} onDelete={() => deleteLink(social)} data={social} />
+                            })
                             : null}
                     </div>
                 </div>
@@ -250,7 +249,7 @@ export default function AdminSideEdit() {
     )
 }
 
-function UpdateCard({linkData, clearUpdation}) {
+function UpdateCard({ linkData, clearUpdation }) {
     const [loading, setLoading] = useState(false) // loading controller
 
     // the values of new social card
