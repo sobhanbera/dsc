@@ -1,13 +1,13 @@
 import Link from 'next/link'
 
-import {useTheme} from '../../context'
-import {CONTACT_AREA_LINK, CONTACT_AREA_NAME, CONTACT_AREA_POSTITION, CONTACT_AREA_PROVIDED} from '../../constants'
-import {WebsiteLogo} from '../'
+import { useTheme } from '../../context'
+import { CONTACT_AREA_LINK, CONTACT_AREA_NAME, CONTACT_AREA_POSTITION, CONTACT_AREA_PROVIDED } from '../../constants'
+import { WebsiteLogo } from '../'
 import styles from '../../styles/components/Footer/index.module.css'
 import SocialList from '../Icons'
 
-export default function Footer({triggerSecret}) {
-    const {theme} = useTheme()
+export default function Footer({ triggerSecret }) {
+    const { theme } = useTheme()
 
     return (
         <footer className={styles.footer}>
@@ -20,7 +20,7 @@ export default function Footer({triggerSecret}) {
                                 <WebsiteLogo />
                                 <p>
                                     <span>Google Developer Student Clubs</span>
-                                    <span>GH Raisoni COE</span>
+                                    <span>GHRCE</span>
                                 </p>
                             </a>
                         </Link>

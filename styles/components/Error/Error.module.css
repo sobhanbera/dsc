@@ -3,6 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: transparent;
 }
 
 .error {
@@ -20,6 +21,7 @@
     align-items: center;
     box-sizing: border-box;
     padding: 10px;
+    background-color: transparent;
 }
 
 .error h1 {
@@ -28,6 +30,7 @@
     font-weight: 900;
     margin: 0;
     color: rgb(70, 70, 70);
+    background-color: transparent;
 }
 
 .error p {
@@ -36,6 +39,7 @@
     margin: 10px 0 90px 0px;
     max-width: 600px;
     color: rgb(70, 70, 70);
+    background-color: transparent;
 }
 
 .error button {
