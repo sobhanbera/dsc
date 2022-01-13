@@ -1,9 +1,9 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 
 import styles from '../styles/pages/Team/index.module.css'
-import TeamMembers from '../constants/team'
-import {RedirectButton, SearchBar} from '../components'
-import {GDSC_GHRCE_OFFICIAL_DSC_PAGE} from '../constants'
+import TeamMembers, { Lead } from '../constants/team'
+import { RedirectButton, SearchBar } from '../components'
+import { GDSC_GHRCE_OFFICIAL_DSC_PAGE } from '../constants'
 
 export default function OurTeam() {
     const [searchText, setSearch] = useState('') // the search text
@@ -16,6 +16,14 @@ export default function OurTeam() {
                 <div className={styles.searchBarContainer}>
                     <SearchBar searchText={searchText} setSearch={setSearch} />
                 </div>
+
+                {Lead.name.toLowerCase().indexOf(searchText.toLowerCase()) > -1 ?
+                    <div className={styles.teamsContainer} style={{
+                        justifyContent: 'center'
+                    }}>
+                        <TeamCard memberData={Lead} />
+                    </div>
+                    : null}
 
                 <div className={styles.teamsContainer}>
                     {TeamMembers.map((teamMember, _) => {
@@ -32,7 +40,7 @@ export default function OurTeam() {
     )
 }
 
-function TeamCard({memberData}) {
+function TeamCard({ memberData }) {
     return (
         <div className={styles.memberCard}>
             <div className={styles.profileImage}>
@@ -48,9 +56,9 @@ function TeamCard({memberData}) {
                 <button>
                     <a href={memberData.profile}>View Profile</a>
                 </button>
-                <button>
+                {memberData.twitter.length > 0 ? <button>
                     <a href={memberData.twitter}>Twitter</a>
-                </button>
+                </button> : null}
             </div>
         </div>
     )

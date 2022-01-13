@@ -1,12 +1,5 @@
 const TeamMembers = [
     {
-        name: 'Khushboo Agnihotri',
-        role: 'GDSC Lead',
-        profile: 'https://gdsc.community.dev/u/mm2gyj/',
-        twitter: 'https://twitter.com/_Khushboo_21',
-        image: 'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2.0,f_auto,g_center,h_250,q_auto:good,w_250/v1/gcs/platform-data-dsc/avatars/khushboo_agnihotri_tnZ8u5n.jpeg',
-    },
-    {
         name: 'Aniket Singh',
         role: 'Technical Head',
         profile: 'https://gdsc.community.dev/u/mrtcwu/',
@@ -100,3 +93,12 @@ const TeamMembers = [
 ]
 
 export default TeamMembers
+
+export const Lead = {
+    name: 'Khushboo Agnihotri',
+    role: 'GDSC Lead',
+    profile: 'https://gdsc.community.dev/u/mm2gyj/',
+    twitter: 'https://twitter.com/_Khushboo_21',
+    image: 'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2.0,f_auto,g_center,h_250,q_auto:good,w_250/v1/gcs/platform-data-dsc/avatars/khushboo_agnihotri_tnZ8u5n.jpeg',
+}
+
