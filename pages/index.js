@@ -4,7 +4,9 @@ import { useInView } from 'react-intersection-observer'
 
 import { GOOGLE_COLORS } from '../constants'
 
-function ColorTrigger({ changeColor, color }) {
+import Main from '../components/Main/main'
+
+function ColorTrigger({ changeColor, color, children }) {
     const [ref, inView] = useInView()
 
     useEffect(() => {
@@ -17,7 +19,7 @@ function ColorTrigger({ changeColor, color }) {
     return (
         <div ref={ref} style={{
             height: '100vh',
-        }}></div>
+        }}>{children}</div>
     )
 }
 
@@ -62,19 +64,21 @@ export default function LandingPage() {
             <p>Color is white currently... keep scrolling...</p>
             <ColorTrigger color={'#FFFFFF'} changeColor={changeColor} />
 
-            <p>Color will change here to blue</p>
-            <ColorTrigger color={GOOGLE_COLORS.BLUE + '50'} changeColor={changeColor} />
+            {/* <p>Color will change here to blue</p> */}
+            <ColorTrigger color={GOOGLE_COLORS.BLUE + '50'} changeColor={changeColor} >
+                <Main />
+            </ColorTrigger>
 
-            <p>Color will change here to redish</p>
+            {/* <p>Color will change here to redish</p> */}
             <ColorTrigger color={GOOGLE_COLORS.RED + '50'} changeColor={changeColor} />
 
-            <p>Color will change here to green</p>
+            {/* <p>Color will change here to green</p> */}
             <ColorTrigger color={GOOGLE_COLORS.GREEN + '50'} changeColor={changeColor} />
 
-            <p>Color will change here to yellow</p>
+            {/* <p>Color will change here to yellow</p> */}
             <ColorTrigger color={GOOGLE_COLORS.YELLOW + '50'} changeColor={changeColor} />
 
-            <p>Color will now change to white back.</p>
+            {/* <p>Color will now change to white back.</p> */}
             <ColorTrigger color={'#ffffff'} changeColor={changeColor} />
         </div>
     )
