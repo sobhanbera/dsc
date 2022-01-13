@@ -1,0 +1,255 @@
+.linkEditPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px 0 30px 0;
+
+    h1 {
+        font-size: 24px;
+    }
+
+    div {
+        h1 {
+            font-size: 18px;
+            text-decoration: underline;
+            text-align: center;
+            margin: 25px 5px 10px 5px;
+            padding: 5px;
+        }
+    }
+
+    .linkEditArea {
+        max-width: 1200px;
+    }
+
+    .linksAreaStarts {
+        max-width: 1200px;
+
+        .linksArea {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+    }
+
+    .linkEditArea form,
+    .updateArea .updateCard form {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        // align-items: center;
+
+        select,
+        input {
+            display: block;
+
+            background-color: rgba(var(--background-rgb), 0.75);
+            backdrop-filter: blur(10px);
+
+            flex-grow: 3;
+
+            min-width: 200px;
+            width: 550px;
+            height: 40px;
+
+            padding: 0 16px 0 16px;
+            margin: 10px 5px;
+
+            font-size: 15px;
+            font-family: Karla;
+
+            border: 1px solid var(--border);
+            border-radius: 4px;
+
+            &:focus {
+                border: 1px solid var(--google-primary-color);
+            }
+        }
+
+        p {
+            font-size: 16px;
+            text-align: center;
+            color: #ff4040;
+        }
+
+        label {
+            p {
+                color: var(--text-color);
+                text-align: left;
+                padding: 6px;
+                padding-bottom: 2px;
+            }
+        }
+
+        select {
+            -moz-appearance: none; /* Firefox */
+            -webkit-appearance: none; /* Safari and Chrome */
+            appearance: none;
+
+            &::-webkit-scrollbar {
+                width: 3px;
+                background-color: #151515; // the actual background color
+            }
+            &::-webkit-scrollbar-thumb {
+                background-color: #ffffff;
+                border-radius: 100px;
+            }
+
+            option {
+                color: var(--text-color);
+                padding: 10px;
+                background-color: rgba(var(--background-rgb), 0.95);
+
+                -webkit-backdrop-filter: blur(10px);
+                backdrop-filter: blur(10px);
+
+                padding: 10px 0;
+                margin: 5px;
+                font-size: 17px;
+            }
+        }
+
+        button {
+            outline: none;
+            border: 1px solid transparent;
+            background-color: var(--google-primary-color);
+            color: #000000;
+
+            padding: 8px 12px;
+            border-radius: 4px;
+            margin: 10px 6px;
+
+            cursor: pointer;
+            font-size: 16px;
+            font-family: Karla;
+
+            &:hover {
+                background-color: transparent;
+                color: var(--google-primary-color);
+                border: 1px solid var(--google-primary-color);
+            }
+        }
+    }
+
+    .updateArea {
+        position: fixed;
+        top: 55px;
+
+        width: 100%;
+        height: 100%;
+        background-color: rgba(var(--background-rgb), 0.5);
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        &.active {
+            left: 0;
+            // background-color: rgba(0, 0, 0, 0.04);
+        }
+
+        &.inactive {
+            left: -100%;
+            // background-color: transparent;
+        }
+
+        .updateCard {
+            cursor: pointer;
+            width: 500px;
+            margin: 10px;
+            padding: 15px 15px;
+
+            height: 550px;
+
+            border-radius: 5px;
+            border: 1px solid var(--border);
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            // align-items: center;
+
+            &:hover {
+                border: 1px solid var(--google-primary-color);
+                box-shadow: 0px 2px 0px rgba(var(--google-primary-color-rgb), 0.5);
+            }
+
+            .updateHeader {
+                background-color: transparent;
+
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                padding: 5px 14px;
+
+                border-bottom: 1px solid var(--border);
+
+                p {
+                    background-color: transparent;
+
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+
+                svg {
+                    background-color: transparent;
+
+                    width: 32px;
+                    height: 32px;
+                    cursor: pointer;
+                    border-radius: 100px;
+                    padding: 5px;
+
+                    &:hover {
+                        background-color: #afafaf50;
+                    }
+                }
+            }
+
+            form {
+                input,
+                select {
+                    max-width: 360px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .linkEditPage {
+        .linkEditArea {
+            form {
+                input,
+                select {
+                    min-width: 300px;
+                    // max-width: 400px;
+                    width: 400px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .linkEditPage {
+        .linkEditArea {
+            form {
+                input,
+                select {
+                    min-width: 300px;
+                    // max-width: 400px;
+                    width: 300px;
+                }
+            }
+        }
+    }
+}

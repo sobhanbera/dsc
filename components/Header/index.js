@@ -1,16 +1,16 @@
-import { useEffect, useState } from 'react'
+import {useEffect, useState} from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
+import {useRouter} from 'next/router'
 
-import { HamburgerIcon, WebsiteLogo, ThemeToggler } from '../index'
+import {HamburgerIcon, WebsiteLogo, ThemeToggler} from '../index'
 import styles from '../../styles/components/Header/index.module.css'
-import { useTheme } from '../../context'
+import {useTheme} from '../../context'
 
-export default function Header({ headerFocused }) {
+export default function Header({headerFocused}) {
     const router = useRouter()
     const [menuOpened, setMenuOpened] = useState(false) // if the menu is opened the value will be true else false
-    const { theme, toggleTheme } = useTheme()
+    const {theme, toggleTheme} = useTheme()
 
     useEffect(() => {
         setMenuOpened(false)
@@ -73,6 +73,14 @@ export default function Header({ headerFocused }) {
                                 <a>Reach Us</a>
                             </Link>
                         </li>
+
+                        {/* linktree implementation */}
+                        <li className={router.asPath === '/socials' ? styles.activePage : ''}>
+                            <Link href="/socials">
+                                <a>More</a>
+                            </Link>
+                        </li>
+
                         {/* first theme toggler for large screens */}
                         <li>
                             <button onClick={() => toggleTheme()}>

@@ -1,6 +1,5 @@
-import { useEffect, useState } from 'react'
+import {useEffect, useState} from 'react'
 import Head from 'next/head'
-import { useInView } from 'react-intersection-observer'
 
 import { GOOGLE_COLORS } from '../constants'
 
@@ -26,14 +25,9 @@ function ColorTrigger({ changeColor, color, children }) {
 export default function LandingPage() {
     const [backgroundColor, setBackgroundColor] = useState('#ffffff')
 
-    function changeColor(color = '#ffffff') {
-        // setBackgroundColor(color)
-    }
-
     useEffect(() => {
-        window.addEventListener("scroll", () => {
-            console.log(window.scrollY)
-            const { scrollY } = window
+        window.addEventListener('scroll', () => {
+            const {scrollY} = window
             if (scrollY > 0 && scrollY < 160) {
                 setBackgroundColor('#FFFFFF')
             } else if (scrollY > 160 && scrollY < 1170) {
@@ -48,6 +42,10 @@ export default function LandingPage() {
                 setBackgroundColor('#FFFFFF')
             }
         })
+
+        return () => {
+            window.removeEventListener('scroll', null)
+        }
     }, [])
 
     return (
@@ -56,11 +54,12 @@ export default function LandingPage() {
                 display: 'flex',
                 flexDirection: 'column',
                 backgroundColor,
-                transition: 'background 1s'
+                transition: 'background 1s',
             }}>
             <Head>
                 <title>Google Developer Student Clubs GHRCE</title>
             </Head>
+
             <p>Color is white currently... keep scrolling...</p>
             <ColorTrigger color={'#FFFFFF'} changeColor={changeColor} />
 
