@@ -27,9 +27,11 @@ export default function SocialLink({data, onEdit, onDelete}) {
                     backgroundColor: data.color,
                     color: isColorBright(data.color) ? '#000000' : '#FFFFFF',
                 }}>
-                <button onClick={onEdit}>
-                    <AiOutlineLink fill={isColorBright(data.color) ? '#000000' : '#ffffff'} />
-                </button>
+                <a href={data.link} target="_blank" rel="noreferrer">
+                    <button onClick={onEdit}>
+                        <AiOutlineLink fill={isColorBright(data.color) ? '#000000' : '#ffffff'} />
+                    </button>
+                </a>
             </div>
         </div>
     )

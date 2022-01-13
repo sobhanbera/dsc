@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import {VscClose} from 'react-icons/vsc'
 import {getAuth} from 'firebase/auth'
-import {getDatabase, ref, update, set, remove, push, onValue} from 'firebase/database'
+import {getDatabase, ref, update, set, remove, onValue} from 'firebase/database'
 
 import {SocialPlatformsIconsData} from '../../../constants/socials'
 import styles from '../../../styles/pages/Admin/LinkEdit/index.module.css'
