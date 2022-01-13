@@ -238,7 +238,7 @@ export default function AdminSideEdit() {
                     <div className={styles.linksArea}>
                         {socialLinks[0].link.length > 0
                             ? socialLinks.map(social => {
-                                  return <AdminSocialLinkPreview onEdit={() => editLink(social.id)} onDelete={() => deleteLink(social)} data={social} />
+                                  return <AdminSocialLinkPreview key={social.id} onEdit={() => editLink(social.id)} onDelete={() => deleteLink(social)} data={social} />
                               })
                             : null}
                     </div>
@@ -384,7 +384,11 @@ function UpdateCard({linkData, clearUpdation}) {
                         {error}
                     </p>
 
-                    <button onClick={e => e.stopPropagation()} onClick={updateLink}>
+                    <button
+                        onClick={e => {
+                            e.stopPropagation()
+                            updateLink()
+                        }}>
                         Update Link
                     </button>
 
