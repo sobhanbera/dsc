@@ -2,7 +2,7 @@ import Link from "next/link"
 import AOS from "aos"
 import 'aos/dist/aos.css'
 import { useEffect } from 'react'
-import styles from '../../styles/components/Main/main.module.css'
+import styles from '../../styles/components/Main/Main.module.css'
 function HomeCard({ heading, subcontent, content, buttonTitle, inputPlaceholder, children }) {
     useEffect(() => {
         // You can also pass an optional settings object
