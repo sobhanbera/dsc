@@ -91,6 +91,7 @@
       -ms-flex-align: start;
           align-items: flex-start;
   padding: 0 3px;
+  margin: 0;
 }
 
 .header .mainHeaderContainer .logoSpan a p span {
@@ -118,6 +119,7 @@
 .header .mainHeaderContainer nav {
   -webkit-transition: 0.5s left;
   transition: 0.5s left;
+  background-color: transparent;
 }
 
 .header .mainHeaderContainer nav ul {

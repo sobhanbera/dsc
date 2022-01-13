@@ -119,6 +119,7 @@
                     height: 26px;
                     margin: 10px 8px;
                     cursor: pointer;
+                    transition: 0.1s all;
                 }
             }
         }
@@ -154,7 +155,7 @@
                             height: 50px;
                         }
 
-                         p {
+                        p {
                             span {
                                 // first if the full form of GDSC
                                 &:nth-child(1) {
