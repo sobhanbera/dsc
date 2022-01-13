@@ -14,8 +14,11 @@
   font-size: 18px;
   text-align: center;
   padding: 0px 12px 10px 12px;
-  border-bottom: 1px solid var(--border);
   background-color: unset;
+}
+
+.socialLinkCard p:nth-child(1) {
+  border-bottom: 1px solid var(--border);
 }
 
 .socialLinkCard p:nth-child(2) {
@@ -72,6 +75,27 @@
   width: 1px;
   background-color: var(--background);
   border-left: 1px solid var(--background);
+}
+
+.socialLinkCard .socialLinkEditing a {
+  background-color: transparent;
+  display: block;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .socialLinkCard .socialLinkEditing button {
