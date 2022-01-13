@@ -20,7 +20,7 @@ export default function Footer({triggerSecret}) {
                                 <WebsiteLogo />
                                 <p>
                                     <span>Google Developer Student Clubs</span>
-                                    <span>GH Raisoni COE</span>
+                                    <span>GHRCE</span>
                                 </p>
                             </a>
                         </Link>
