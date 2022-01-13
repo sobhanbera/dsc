@@ -1,0 +1,95 @@
+.loadingContainer {
+    .loadingWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+
+        .ball {
+            width: 22px;
+            height: 22px;
+            border-radius: 11px;
+            margin: 0 10px;
+            animation: 2s bounce ease infinite;
+
+            &.blue {
+                background-color: #4285f5;
+            }
+
+            &.red {
+                background-color: #ea4436;
+                animation-delay: 0.25s;
+            }
+
+            &.yellow {
+                background-color: #fbbd06;
+                animation-delay: 0.5s;
+            }
+
+            &.green {
+                background-color: #34a952;
+                animation-delay: 0.75s;
+            }
+        }
+
+        &.small {
+            height: max-content;
+            padding: 10px 5px;
+            height: 60px;
+
+            .ball {
+                width: 16px;
+                height: 16px;
+                margin: 0 4px;
+            }
+        }
+    }
+
+    p {
+        text-align: center;
+    }
+}
+
+@keyframes bounce {
+    50% {
+        transform: translateY(25px);
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .loadingContainer {
+        .loadingWrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150px;
+
+            .ball {
+                width: 18px;
+                height: 18px;
+                border-radius: 11px;
+                margin: 0 6px;
+                animation: 2s bounce ease infinite;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .loadingContainer {
+        .loadingWrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+
+            .ball {
+                width: 14px;
+                height: 14px;
+                border-radius: 11px;
+                margin: 0 8px;
+                animation: 2s bounce ease infinite;
+            }
+        }
+    }
+}

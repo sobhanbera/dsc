@@ -1,0 +1,146 @@
+.teamsPage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 0 30px 0;
+}
+
+.teamsPage h1 {
+  font-size: 24px;
+}
+
+.teamsPage .mainTeamsContainer {
+  max-width: 1150px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.teamsPage .mainTeamsContainer .teamsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.teamsPage .mainTeamsContainer .teamsContainer .memberCard {
+  border-radius: 5px;
+  border: 1px solid var(--border);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 15px;
+  margin: 12px 10px 10px 10px;
+  min-width: 340px;
+}
+
+.teamsPage .mainTeamsContainer .teamsContainer .memberCard:hover {
+  border: 1px solid var(--google-primary-color);
+  -webkit-box-shadow: 0px 2px 0px rgba(var(--google-primary-color-rgb), 0.5);
+          box-shadow: 0px 2px 0px rgba(var(--google-primary-color-rgb), 0.5);
+}
+
+.teamsPage .mainTeamsContainer .teamsContainer .memberCard .profileImage img {
+  border-radius: 200px;
+}
+
+.teamsPage .mainTeamsContainer .teamsContainer .memberCard .memberDetails p {
+  text-align: center;
+}
+
+.teamsPage .mainTeamsContainer .teamsContainer .memberCard .memberDetails p:nth-child(1) {
+  font-size: 18px;
+  padding: 15px 10px 5px 10px;
+  font-weight: 600;
+}
+
+.teamsPage .mainTeamsContainer .teamsContainer .memberCard .memberDetails p:nth-child(2) {
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+
+.teamsPage .mainTeamsContainer .teamsContainer .memberCard .linkButtons {
+  margin: 10px;
+}
+
+.teamsPage .mainTeamsContainer .teamsContainer .memberCard .linkButtons button {
+  border: none;
+  outline: none;
+  min-width: 120px;
+  margin: 5px;
+}
+
+.teamsPage .mainTeamsContainer .teamsContainer .memberCard .linkButtons button a {
+  min-width: 120px;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+}
+
+.teamsPage .mainTeamsContainer .teamsContainer .memberCard .linkButtons button a:hover {
+  border: 1px solid var(--google-primary-color);
+  -webkit-box-shadow: 0px 2px 0px rgba(var(--google-primary-color-rgb), 0.5);
+          box-shadow: 0px 2px 0px rgba(var(--google-primary-color-rgb), 0.5);
+}
+
+@media screen and (max-width: 1200px) {
+  .teamsPage .mainTeamsContainer .teamsContainer {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .teamsPage .mainTeamsContainer .teamsContainer .memberCard {
+    min-width: 300px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .teamsPage .mainTeamsContainer .teamsContainer .memberCard {
+    min-width: 250px;
+  }
+}
+/*# sourceMappingURL=index.module.css.map */

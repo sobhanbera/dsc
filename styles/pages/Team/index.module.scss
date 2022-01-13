@@ -1,0 +1,138 @@
+.teamsPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px 0 30px 0;
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .mainTeamsContainer {
+        max-width: 1150px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // align-items: center;
+
+        .teamsContainer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+
+            .memberCard {
+                border-radius: 5px;
+                border: 1px solid var(--border);
+
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+
+                padding: 15px 15px;
+                margin: 12px 10px 10px 10px;
+
+                min-width: 340px;
+
+                &:hover {
+                    border: 1px solid var(--google-primary-color);
+                    box-shadow: 0px 2px 0px rgba(var(--google-primary-color-rgb), 0.5);
+                }
+
+                .profileImage {
+                    img {
+                        border-radius: 200px;
+                    }
+                }
+
+                .memberDetails {
+                    p {
+                        text-align: center;
+
+                        // name of the member
+                        &:nth-child(1) {
+                            font-size: 18px;
+                            padding: 15px 10px 5px 10px;
+                            font-weight: 600;
+                        }
+
+                        // role of the member
+                        &:nth-child(2) {
+                            font-size: 16px;
+                            padding-bottom: 10px;
+                        }
+                    }
+                }
+
+                .linkButtons {
+                    margin: 10px;
+
+                    button {
+                        border: none;
+                        outline: none;
+
+                        min-width: 120px;
+                        margin: 5px;
+
+                        a {
+                            min-width: 120px;
+                            display: inline-block;
+
+                            font-size: 16px;
+                            border-radius: 4px;
+                            padding: 8px 12px;
+
+                            border: 1px solid var(--border);
+
+                            &:hover {
+                                border: 1px solid var(--google-primary-color);
+                                box-shadow: 0px 2px 0px rgba(var(--google-primary-color-rgb), 0.5);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .teamsPage {
+        .mainTeamsContainer {
+            .teamsContainer {
+                justify-content: space-evenly;
+
+                .memberCard {
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .teamsPage {
+        .mainTeamsContainer {
+            .teamsContainer {
+                .memberCard {
+                    min-width: 300px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .teamsPage {
+        .mainTeamsContainer {
+            .teamsContainer {
+                .memberCard {
+                    min-width: 250px;
+                }
+            }
+        }
+    }
+}

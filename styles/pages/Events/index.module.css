@@ -1,0 +1,360 @@
+.eventsPage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 0 30px 0;
+}
+
+.eventsPage h1 {
+  font-size: 24px;
+}
+
+.eventsPage .mainEventsContainer {
+  max-width: 1100px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.eventsPage .mainEventsContainer h1 {
+  text-align: center;
+  text-decoration: underline;
+  padding-top: 15px;
+  padding-bottom: 7px;
+}
+
+.eventsPage .mainEventsContainer h1 a {
+  font-size: 24px;
+}
+
+.eventsPage .mainEventsContainer .eventsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.eventsPage .mainEventsContainer .eventsContainer .eventsCard {
+  cursor: pointer;
+  width: 500px;
+  margin: 10px;
+  padding: 15px 15px;
+  height: 550px;
+  border-radius: 5px;
+  border: 1px solid var(--border);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.eventsPage .mainEventsContainer .eventsContainer .eventsCard:hover {
+  border: 1px solid var(--google-primary-color);
+  -webkit-box-shadow: 0px 2px 0px rgba(var(--google-primary-color-rgb), 0.5);
+          box-shadow: 0px 2px 0px rgba(var(--google-primary-color-rgb), 0.5);
+}
+
+.eventsPage .mainEventsContainer .eventsContainer .eventsCard .artwork img {
+  border-radius: 5px;
+  border: 1px solid var(--border);
+}
+
+.eventsPage .mainEventsContainer .eventsContainer .eventsCard .eventDetails p {
+  text-align: center;
+}
+
+.eventsPage .mainEventsContainer .eventsContainer .eventsCard .eventDetails p:nth-child(1) {
+  font-size: 14px;
+  padding: 5px;
+}
+
+.eventsPage .mainEventsContainer .eventsContainer .eventsCard .eventDetails p:nth-child(2) {
+  padding: 10px;
+}
+
+.eventsPage .mainEventsContainer .eventsContainer .eventsCard .eventDetails p:nth-child(2) a {
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.eventsPage .mainEventsContainer .eventsContainer .eventsCard .eventDetails p:nth-child(2) a:hover {
+  text-decoration: underline;
+}
+
+.eventsPage .mainEventsContainer .eventsContainer .eventsCard .eventDetails p:nth-child(3) {
+  font-size: 17px;
+  font-weight: 400;
+  padding: 10px;
+  line-height: 20px;
+}
+
+.eventsPage .mainEventsContainer .eventsContainer .eventsCard .eventDetails p:last-child {
+  font-size: 15px;
+  padding: 20px 5px 5px 5px;
+}
+
+.eventsPage .mainEventsContainer .eventsContainer .eventsCard .eventDetails p:last-child a {
+  font-size: 15px;
+  text-decoration: underline;
+}
+
+.eventsPage .mainEventsContainer .eventsContainer .eventsCard .eventDetails .tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.eventsPage .mainEventsContainer .eventsContainer .eventsCard .eventDetails .tags span {
+  border-radius: 100px;
+  cursor: pointer;
+  margin: 5px 4px;
+  font-size: 15px;
+  padding: 5px 12px;
+  background-color: rgba(var(--google-primary-color-rgb), 0.9);
+  color: var(--theme-color);
+}
+
+.eventsPage .mainEventsContainer .eventsContainer .eventsCard .eventDetails .tags span:hover {
+  background-color: rgba(var(--google-primary-color-rgb), 1);
+}
+
+.eventsPage .eventDescription {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 55px;
+  -webkit-transition: 1s background ease, 0.9s left ease;
+  transition: 1s background ease, 0.9s left ease;
+  background-color: transparent;
+}
+
+.eventsPage .eventDescription.active {
+  left: 0;
+}
+
+.eventsPage .eventDescription.inactive {
+  left: -100%;
+}
+
+.eventsPage .eventDescription .eventDescriptionCard {
+  background-color: rgba(var(--background-rgb), 0.9);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  max-width: 600px;
+  padding: 5px 6px 10px;
+  border-radius: 9px;
+  -webkit-box-shadow: 0px 0px 20px rgba(var(--shadow-rgb), 0.25);
+          box-shadow: 0px 0px 20px rgba(var(--shadow-rgb), 0.25);
+}
+
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionHeader {
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionHeader p {
+  background-color: transparent;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionHeader svg {
+  background-color: transparent;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  border-radius: 100px;
+  padding: 5px;
+}
+
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionHeader svg:hover {
+  background-color: #afafaf50;
+}
+
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent {
+  background-color: transparent;
+  max-height: 500px;
+  overflow-y: scroll;
+  padding: 14px;
+}
+
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent h1,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent h2,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent h3,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent h4,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent h5,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent h6 {
+  padding: 10px 0;
+  background-color: transparent;
+}
+
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent h1 b,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent h1 i,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent h1 u,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent h2 b,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent h2 i,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent h2 u,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent h3 b,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent h3 i,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent h3 u,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent h4 b,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent h4 i,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent h4 u,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent h5 b,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent h5 i,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent h5 u,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent h6 b,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent h6 i,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent h6 u {
+  background-color: transparent;
+}
+
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent p,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent span,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent * {
+  background-color: transparent;
+  padding: 7px 0;
+}
+
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent p a,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent span a,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent * a {
+  color: var(--text-color);
+}
+
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent p a b,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent p a i,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent p a u,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent span a b,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent span a i,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent span a u,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent * a b,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent * a i,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent * a u {
+  background-color: transparent;
+}
+
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent p a:hover,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent span a:hover,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent * a:hover {
+  color: var(--google-primary-color);
+}
+
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent p b,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent p i,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent p u,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent span b,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent span i,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent span u,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent * b,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent * i,
+.eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent * u {
+  background-color: transparent;
+}
+
+@media screen and (max-width: 1060px) {
+  .eventsPage .mainEventsContainer .eventsContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .eventsPage .mainEventsContainer .eventsContainer .eventsCard {
+    max-width: 340px;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    margin: 10px;
+  }
+  .eventsPage .eventDescription .eventDescriptionCard {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+  }
+  .eventsPage .eventDescription .eventDescriptionCard .eventDescriptionContent {
+    height: 100%;
+  }
+}
+/*# sourceMappingURL=index.module.css.map */
