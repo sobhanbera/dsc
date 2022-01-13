@@ -12,6 +12,7 @@
         "prettier-format": "yarn prettier --write pages styles && git status"
     },
     "dependencies": {
+        "aos": "^2.3.4",
         "axios": "0.24.0",
         "bcrypt": "5.0.1",
         "dayjs": "1.10.7",

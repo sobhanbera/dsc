@@ -1,7 +1,26 @@
 import {useEffect, useState} from 'react'
 import Head from 'next/head'
 
-import {GOOGLE_COLORS} from '../constants'
+import { GOOGLE_COLORS } from '../constants'
+
+import Main from '../components/Main/main'
+
+function ColorTrigger({ changeColor, color, children }) {
+    const [ref, inView] = useInView()
+
+    useEffect(() => {
+        if (inView) {
+            console.log("Color changed to:", color)
+            changeColor(color)
+        }
+    }, [inView])
+
+    return (
+        <div ref={ref} style={{
+            height: '100vh',
+        }}>{children}</div>
+    )
+}
 
 export default function LandingPage() {
     const [backgroundColor, setBackgroundColor] = useState('#ffffff')
@@ -40,11 +59,26 @@ export default function LandingPage() {
             <Head>
                 <title>Google Developer Student Clubs GHRCE</title>
             </Head>
-            {/* testing purpose texts */}
-            {/* <p>Color is blue currently... keep scrolling...</p>
-            <p>Color will change here to redish</p>
-            <p>Color will change here to green</p>
-            <p>Color will change here to yellow</p> */}
+
+            <p>Color is white currently... keep scrolling...</p>
+            <ColorTrigger color={'#FFFFFF'} changeColor={changeColor} />
+
+            {/* <p>Color will change here to blue</p> */}
+            <ColorTrigger color={GOOGLE_COLORS.BLUE + '50'} changeColor={changeColor} >
+                <Main />
+            </ColorTrigger>
+
+            {/* <p>Color will change here to redish</p> */}
+            <ColorTrigger color={GOOGLE_COLORS.RED + '50'} changeColor={changeColor} />
+
+            {/* <p>Color will change here to green</p> */}
+            <ColorTrigger color={GOOGLE_COLORS.GREEN + '50'} changeColor={changeColor} />
+
+            {/* <p>Color will change here to yellow</p> */}
+            <ColorTrigger color={GOOGLE_COLORS.YELLOW + '50'} changeColor={changeColor} />
+
+            {/* <p>Color will now change to white back.</p> */}
+            <ColorTrigger color={'#ffffff'} changeColor={changeColor} />
         </div>
     )
 }
