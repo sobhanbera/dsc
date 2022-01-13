@@ -26,3 +26,7 @@ export const GDSC_GHRCE_OFFICIAL_DSC_PAGE = 'https://gdsc.community.dev/gh-raiso
 export const HEADER_HEIGHT = 55
 
 export const MONTHS_LIST = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+
+// export const VALID_LINK_REGEX = /^((ftp|https):\/\/)?(www.)?(?!.*(ftp|https|www.))[a-zA-Z0-9_-]+(\.[a-zA-Z]+)+((\/)[\w#]+)*(\/\w+\?[a-zA-Z0-9_]+=\w+(&[a-zA-Z0-9_]+=\w+)*)?$/gm
+export const VALID_LINK_REGEX = /^((ftp|https):\/\/)?(www.)?(?!.*(ftp|https|www.))[a-zA-Z0-9_-]+(\.[a-zA-Z]+)+((\/)[\w#-]+)*(\/\w+\?[a-zA-Z0-9_]+=\w+(&[a-zA-Z0-9_]+=\w+)*)?$/gm
+// export const VALID_LINK_REGEX = /^((http|https):\/\/)(www.)?[a-zA-Z0-9@:%._\\+~#?&//=]{2,256}\\.[a-z]{2,6}\\b([-a-zA-Z0-9@:%._\\+~#?&//=]*)/gm

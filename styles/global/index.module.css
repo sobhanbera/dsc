@@ -96,6 +96,10 @@
   border: 1px solid var(--google-primary-color);
 }
 
+.secretFeature .secretFeatureCard form button {
+  display: none;
+}
+
 @media screen and (max-width: 520px) {
   .secretFeature .secretFeatureCard {
     width: 93%;

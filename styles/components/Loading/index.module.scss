@@ -31,6 +31,18 @@
                 animation-delay: 0.75s;
             }
         }
+
+        &.small {
+            height: max-content;
+            padding: 10px 5px;
+            height: 60px;
+
+            .ball {
+                width: 16px;
+                height: 16px;
+                margin: 0 4px;
+            }
+        }
     }
 
     p {
