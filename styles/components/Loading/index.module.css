@@ -42,6 +42,20 @@
           animation-delay: 0.75s;
 }
 
+.loadingContainer .loadingWrapper.small {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 10px 5px;
+  height: 60px;
+}
+
+.loadingContainer .loadingWrapper.small .ball {
+  width: 16px;
+  height: 16px;
+  margin: 0 4px;
+}
+
 .loadingContainer p {
   text-align: center;
 }

@@ -69,6 +69,10 @@
                     border: 1px solid var(--google-primary-color);
                 }
             }
+
+            button {
+                display: none;
+            }
         }
     }
 }
