@@ -58,7 +58,7 @@ export default function Socials() {
                     <div className={styles.linksArea}>
                         {socialLinks[0].link.length > 0
                             ? socialLinks.map(social => {
-                                  return <SocialLink onEdit={() => editLink(social.id)} onDelete={() => deleteLink(social)} data={social} />
+                                  return <SocialLink key={social.id} onEdit={() => editLink(social.id)} onDelete={() => deleteLink(social)} data={social} />
                               })
                             : null}
                     </div>
