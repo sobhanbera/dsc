@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import Head from 'next/head'
 import {useInView} from 'react-intersection-observer'
 import {FirebaseApp} from '../firebase'
 import {getAuth, signInWithEmailAndPassword, setPersistence, browserSessionPersistence} from 'firebase/auth'
@@ -51,6 +52,21 @@ export default function MyApp({Component, pageProps}) {
     return (
         <ThemeProvider>
             <Ascii>
+                <Head>
+                    <title>Google Developer Student Clubs GHRCE</title>
+                    <meta name="description" content="DSC GHRCE (Google Developer Student Clubs GHRCE) is a Google program for institute/university students, with an proper aim to help students improve their skills/talents." />
+
+                    <meta charset="utf-8" />
+                    <meta name="theme-color" content="#FFFFFF" />
+                    <meta httpEquiv="content-language" content="en" />
+
+                    <meta name="viewport" content="width=device-width,initial-scale=1" />
+                    <meta name="keywords" content="dsc-ghrce, dsc, ghrce, google developer student club ghrce, gdsc, gdsc-ghrce" />
+
+                    <meta name="page-type" content="Community Website" />
+                    <meta name="page-topic" content="Detail about DSC-GHRCE" />
+                </Head>
+
                 <Header headerFocused={inView} />
 
                 {/* bare div just to say that user have scrolled or not */}

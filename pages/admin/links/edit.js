@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import {VscClose} from 'react-icons/vsc'
 import {getAuth} from 'firebase/auth'
 import {getDatabase, ref, update, set, remove, onValue} from 'firebase/database'
+import Head from 'next/head'
 
 import {SocialPlatformsIconsData} from '../../../constants/socials'
 import styles from '../../../styles/pages/Admin/LinkEdit/index.module.css'
@@ -173,6 +174,12 @@ export default function AdminSideEdit() {
 
     return (
         <div className={styles.linkEditPage}>
+            <Head>
+                <title>DSC GHRCE | Hidden Feature</title>
+                <meta name="description" content="" />
+                <meta name="keywords" content="" />
+            </Head>
+
             <h1>Edit Links</h1>
 
             <div className={styles.linkEditArea}>
