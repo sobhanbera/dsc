@@ -127,12 +127,13 @@ const CodingCard = () => {
                     .fill(0)
                     .map(codeLine => {
                         return (
-                            <div className={styles.codingLine}>
+                            <div className={styles.codingLine} key={codeLine}>
                                 {Array(random(3, 5))
                                     .fill(0)
                                     .map(codeLine => {
                                         return (
                                             <div
+                                                key={codeLine}
                                                 className={styles.code}
                                                 style={{
                                                     backgroundColor: colors[Math.floor(Math.random() * colors.length)],
@@ -152,6 +153,7 @@ const CodingCard = () => {
                         .map(codeLine => {
                             return (
                                 <div
+                                    key={codeLine}
                                     className={styles.codingLine}
                                     style={{
                                         backgroundColor: 'transparent',
@@ -161,6 +163,7 @@ const CodingCard = () => {
                                         .map(codeLine => {
                                             return (
                                                 <div
+                                                    key={codeLine}
                                                     className={styles.code}
                                                     style={{
                                                         backgroundColor: logColor[Math.floor(Math.random() * logColor.length)],
