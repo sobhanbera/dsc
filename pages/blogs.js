@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, {useEffect, useState} from 'react'
 import axios from 'axios'
+import Head from 'next/head'
 
 import styles from '../styles/pages/Blogs/index.module.css'
-import { Loading, RedirectButton, SearchBar } from '../components'
-import { MEDIUM_BLOG_API_LINK, MEDIUM_PAGE } from '../constants'
-import { getFormattedDate, shortenText } from '../utils'
+import {Loading, RedirectButton, SearchBar} from '../components'
+import {MEDIUM_BLOG_API_LINK, MEDIUM_PAGE} from '../constants'
+import {getFormattedDate, shortenText} from '../utils'
 
 const DemoBlog = {
     title: '',
@@ -30,7 +31,7 @@ export default function Blogs() {
                     setBlogs(res.data.items)
                 }
             })
-            .catch(err => { })
+            .catch(err => {})
     })
 
     const redirectTo = (website = '') => {
@@ -39,6 +40,12 @@ export default function Blogs() {
 
     return (
         <div className={styles.blogsPage}>
+            <Head>
+                <title>DSC GHRCE | Blogs</title>
+                <meta name="description" content="Blogs written by our fellow community members are litsted here." />
+                <meta name="keywords" content="dsc blogs, ghrce blogs, dsc-ghrce blogs, dsc-ghrce, dsc, ghrce, google developer student club ghrce, gdsc, gdsc-ghrce" />
+            </Head>
+
             <h1>Blogs</h1>
 
             <div className={styles.mainBlogsContainer}>
@@ -61,12 +68,12 @@ export default function Blogs() {
                 )}
             </div>
 
-            <RedirectButton link={MEDIUM_PAGE} title={"Read More..."} />
+            <RedirectButton link={MEDIUM_PAGE} title={'Read More...'} />
         </div>
     )
 }
 
-function BlogCard({ blog, onClick, setSearchText }) {
+function BlogCard({blog, onClick, setSearchText}) {
     const formattedUploadTime = getFormattedDate(blog.pubDate)
 
     return (
@@ -81,7 +88,9 @@ function BlogCard({ blog, onClick, setSearchText }) {
 
                 <p>{blog.title}</p>
                 <p>
-                    <a href={blog.link} target="_blank" rel="noreferrer">Read The Blog...</a>
+                    <a href={blog.link} target="_blank" rel="noreferrer">
+                        Read The Blog...
+                    </a>
                 </p>
 
                 <div className={styles.categoriesList}>

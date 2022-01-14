@@ -3,6 +3,10 @@
   background-color: transparent;
 }
 
+.landingPage * {
+  background-color: transparent;
+}
+
 .landingPage .landingPageHeader {
   width: 100%;
   min-height: 90vh;

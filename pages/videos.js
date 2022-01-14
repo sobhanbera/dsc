@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, {useEffect, useState} from 'react'
 import axios from 'axios'
-import { VscClose } from 'react-icons/vsc'
-import { AiOutlineLink } from 'react-icons/ai'
+import {VscClose} from 'react-icons/vsc'
+import {AiOutlineLink} from 'react-icons/ai'
+import Head from 'next/head'
 
 import styles from '../styles/pages/videos/index.module.css'
-import { SearchBar, Loading, RedirectButton } from '../components'
-import { shortenText } from '../utils'
-import { YOUTUBE_CHANNEL_LINK } from '../constants'
+import {SearchBar, Loading, RedirectButton} from '../components'
+import {shortenText} from '../utils'
+import {YOUTUBE_CHANNEL_LINK} from '../constants'
 
 // This page will render a list of youtube videos
 // It will also render a search bar
@@ -84,15 +85,21 @@ export default function Videos() {
     }, [])
 
     /**
-    * helps to launch a interface which will play a certain video based on the input data
-    * @param {VideoData} video videos data which is to be opened in the window itself
-    **/
+     * helps to launch a interface which will play a certain video based on the input data
+     * @param {VideoData} video videos data which is to be opened in the window itself
+     **/
     const launchVideo = (video = DemoVideoData) => {
         setShowVideo(video)
     }
 
     return (
         <div className={styles.videosPage}>
+            <Head>
+                <title>DSC GHRCE | Video</title>
+                <meta name="description" content="We streams and uploads continous videos of each and every events, programs, hackathons, quiz, competition, etc. We welcome you to learn new thing from these by watching videos on our yoututbe channel." />
+                <meta name="keywords" content="dsc-ghrce, dsc, ghrce, social media links, youtube channel of gdsc ghrce" />
+            </Head>
+
             <h1>Videos</h1>
 
             <div className={styles.mainVideosContainer}>
@@ -114,14 +121,14 @@ export default function Videos() {
                 )}
             </div>
 
-            <RedirectButton link={YOUTUBE_CHANNEL_LINK} title={"Watch More"} />
+            <RedirectButton link={YOUTUBE_CHANNEL_LINK} title={'Watch More'} />
 
             <VideoPlayer video={showVideo} clearVideo={() => setShowVideo(DemoVideoData)} />
         </div>
     )
 }
 
-function VideoCard({ video, onClick }) {
+function VideoCard({video, onClick}) {
     const [description, setDescription] = useState('')
     const title = shortenText(video.title + '', 60)
 
@@ -138,7 +145,7 @@ function VideoCard({ video, onClick }) {
                     if (res.data.data.videoDescription) setDescription(res.data.data.videoDescription)
                 }
             })
-            .catch(err => { })
+            .catch(err => {})
     }, [video.id])
 
     return (
@@ -155,14 +162,19 @@ function VideoCard({ video, onClick }) {
     )
 }
 
-function VideoPlayer({ video, clearVideo }) {
+function VideoPlayer({video, clearVideo}) {
     // console.log(`https://www.youtube.com/embed/${video.id}?autoplay=1&loop=1`)
     console.log(video.title, video.id)
 
     return (
         <div className={`${styles.videoPlayer} ${video.id.length > 0 ? styles.active : styles.inactive}`}>
             <div className={styles.videoPlayerTop}>
-                <a href={video.url} target="_blank" rel="noreferrer"><p><AiOutlineLink />{video.title}</p></a>
+                <a href={video.url} target="_blank" rel="noreferrer">
+                    <p>
+                        <AiOutlineLink />
+                        {video.title}
+                    </p>
+                </a>
                 <VscClose onClick={clearVideo} />
             </div>
 
@@ -174,11 +186,10 @@ function VideoPlayer({ video, clearVideo }) {
                     title={video.title}
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen>
-                </iframe>
+                    allowFullScreen></iframe>
             </div>
 
             <div className={styles.videoPlayerBottom}></div>
-        </div >
+        </div>
     )
 }
