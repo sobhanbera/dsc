@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react'
-import { VscClose } from 'react-icons/vsc'
-import { getAuth } from 'firebase/auth'
-import { getDatabase, ref, update, set, remove, onValue } from 'firebase/database'
+import React, {useState, useEffect} from 'react'
+import {VscClose} from 'react-icons/vsc'
+import {getAuth} from 'firebase/auth'
+import {getDatabase, ref, update, set, remove, onValue} from 'firebase/database'
 
-import { SocialPlatformsIconsData } from '../../../constants/socials'
+import {SocialPlatformsIconsData} from '../../../constants/socials'
 import styles from '../../../styles/pages/Admin/LinkEdit/index.module.css'
-import { AdminSocialLinkPreview, SmallLoading, TextInput } from '../../../components'
-import { VALID_LINK_REGEX } from '../../../constants'
+import {AdminSocialLinkPreview, SmallLoading, TextInput} from '../../../components'
+import {VALID_LINK_REGEX} from '../../../constants'
 
 /**
  * a test data just to render the list
@@ -164,7 +164,7 @@ export default function AdminSideEdit() {
     const deleteLink = (linkData = '') => {
         if (window.confirm('Are you sure you want to delete the link from database. This operation is not reversible.')) {
             remove(ref(firebaseDatabase, '/links/' + linkData.timestamp))
-                .then(res => { })
+                .then(res => {})
                 .catch(err => {
                     alert("Couldn't delete the link currently...")
                 })
@@ -180,7 +180,7 @@ export default function AdminSideEdit() {
                     <a href="#addnewlink">Add New Links</a>
                 </h1>
 
-                <form onSubmit={addNewLink}>
+                <form onSubmit={e => addNewLink(e)}>
                     {/* optional icon field */}
                     <label htmlFor="platformtag">
                         <p>Provide any icon (Optional):</p>
@@ -222,7 +222,7 @@ export default function AdminSideEdit() {
                     <TextInput value={newLink} id="link" onChange={e => setNewLink(e.target.value)} placeholder={'Enter the link...'} />
                     <p className={styles.errorText}>{error}</p>
 
-                    <button onClick={addNewLink}>Add Link</button>
+                    <button onClick={e => addNewLink(e)}>Add Link</button>
 
                     {loading ? <SmallLoading /> : null}
                 </form>
@@ -237,8 +237,8 @@ export default function AdminSideEdit() {
                     <div className={styles.linksArea}>
                         {socialLinks[0].link.length > 0
                             ? socialLinks.map(social => {
-                                return <AdminSocialLinkPreview key={social.id} onEdit={() => editLink(social.id)} onDelete={() => deleteLink(social)} data={social} />
-                            })
+                                  return <AdminSocialLinkPreview key={social.id} onEdit={() => editLink(social.id)} onDelete={() => deleteLink(social)} data={social} />
+                              })
                             : null}
                     </div>
                 </div>
@@ -249,7 +249,7 @@ export default function AdminSideEdit() {
     )
 }
 
-function UpdateCard({ linkData, clearUpdation }) {
+function UpdateCard({linkData, clearUpdation}) {
     const [loading, setLoading] = useState(false) // loading controller
 
     // the values of new social card
@@ -287,6 +287,19 @@ function UpdateCard({ linkData, clearUpdation }) {
             setError('')
         }
     }, [newLink])
+
+    /**
+     * when platform updates also update
+     * the color related to that particular platform icon or so..
+     */
+    useEffect(() => {
+        // since it is tag
+        const GetIconData = SocialPlatformsIconsData.filter(icon => icon.tag === newPlatformTag)
+
+        if (GetIconData.length > 0)
+            // only one icon will have the same tag so updating the color here...
+            setNewColor(GetIconData[0].color)
+    }, [newPlatformTag])
 
     /**
      * final update link function
@@ -338,10 +351,10 @@ function UpdateCard({ linkData, clearUpdation }) {
                     <VscClose onClick={clearUpdation} />
                 </div>
 
-                <form onSubmit={updateLink} onClick={e => e.stopPropagation()}>
+                <form onSubmit={e => updateLink(e)} onClick={e => e.stopPropagation()}>
                     {/* optional icon field */}
                     <label htmlFor="platformtagu" onClick={e => e.stopPropagation()}>
-                        <p>Provide any icon (Optional):</p>
+                        <p>Provide any icon:</p>
                     </label>
                     <select
                         onClick={e => e.stopPropagation()}
@@ -351,7 +364,7 @@ function UpdateCard({ linkData, clearUpdation }) {
                         }}
                         value={newPlatformTag}>
                         {/* the none option */}
-                        <option value={''}>Select Icon (Optional)</option>
+                        <option value={''}>Select Icon</option>
 
                         {/* list of all options */}
                         {SocialPlatformsIconsData.map(iconData => {
@@ -383,13 +396,7 @@ function UpdateCard({ linkData, clearUpdation }) {
                         {error}
                     </p>
 
-                    <button
-                        onClick={e => {
-                            e.stopPropagation()
-                            updateLink()
-                        }}>
-                        Update Link
-                    </button>
+                    <button onClick={e => updateLink(e)}>Update Link</button>
 
                     {loading ? <SmallLoading onClick={e => e.stopPropagation()} /> : null}
                 </form>
