@@ -1,0 +1,418 @@
+.landingPage {
+  padding-bottom: 100px;
+  background-color: transparent;
+}
+
+.landingPage .landingPageHeader {
+  width: 100%;
+  min-height: 90vh;
+  max-height: 100vh;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.landingPage .landingPageHeader .landingPageHeaderTop {
+  background-color: transparent;
+  width: 100%;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.landingPage .landingPageHeader .landingPageHeaderTop .logoArea {
+  background-color: transparent;
+}
+
+.landingPage .landingPageHeader .landingPageHeaderTop .logoArea .logoSpan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.landingPage .landingPageHeader .landingPageHeaderTop .logoArea .logoSpan svg {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0;
+  padding: 0;
+  height: 100px;
+}
+
+.landingPage .landingPageHeader .landingPageHeaderTop .logoArea .logoSpan p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 0 3px;
+  margin: 0;
+  text-align: center;
+}
+
+.landingPage .landingPageHeader .landingPageHeaderTop .logoArea .logoSpan p span {
+  padding: 0 3px;
+}
+
+.landingPage .landingPageHeader .landingPageHeaderTop .logoArea .logoSpan p span:nth-child(1) {
+  font-size: 20px;
+  color: var(--text-color-light);
+  font-weight: 700;
+}
+
+.landingPage .landingPageHeader .landingPageHeaderTop .logoArea .logoSpan p span:nth-child(2) {
+  font-size: 18px;
+  color: var(--text-color-light);
+  font-weight: 600;
+  text-align: center;
+}
+
+.landingPage .landingPageHeader .landingPageHeaderTop .logoArea .description p {
+  white-space: pre-wrap;
+  background-color: transparent;
+  text-align: center;
+  padding: 30px 8px;
+  max-width: 400px;
+}
+
+.landingPage .landingPageHeader .landingPageHeaderTop .logoArea .description .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 20px 8px;
+}
+
+.landingPage .landingPageHeader .landingPageHeaderTop .logoArea .description .buttons button {
+  min-width: 100px;
+  border: none;
+  outline: none;
+}
+
+.landingPage .landingPageHeader .landingPageHeaderTop .logoArea .description .buttons button a {
+  padding: 7px 14px;
+  background-color: var(--google-primary-color);
+  border: 1px solid transparent;
+  border-radius: 2px;
+  color: var(--unique);
+}
+
+.landingPage .landingPageHeader .landingPageHeaderTop .logoArea .description .buttons button a:hover {
+  background-color: transparent;
+  border: 1px solid var(--google-primary-color);
+  color: var(--google-primary-color);
+}
+
+.landingPage .landingPageHeader .landingPageHeaderTop .codingCardArea {
+  background-color: transparent;
+}
+
+.landingPage .landingPageHeader .landingPageHeaderTop .codingCardArea .codingCard {
+  max-width: 350px;
+  min-width: 335px;
+  width: 340px;
+  height: 430px;
+  outline: 1px solid transparent;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transform: rotateX(9deg) rotateY(-10deg) rotateZ(3deg);
+          transform: rotateX(9deg) rotateY(-10deg) rotateZ(3deg);
+  -webkit-box-shadow: 8px 8px 3px var(--common-shadow);
+          box-shadow: 8px 8px 3px var(--common-shadow);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--background);
+  border: 2px solid var(--border);
+  border-radius: 6px;
+  color: white;
+}
+
+.landingPage .landingPageHeader .landingPageHeaderTop .codingCardArea .codingCard:hover {
+  -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+          transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -webkit-box-shadow: 12px 12px 3px var(--common-shadow);
+          box-shadow: 12px 12px 3px var(--common-shadow);
+}
+
+.landingPage .landingPageHeader .landingPageHeaderTop .codingCardArea .codingCard .codingCardHeader {
+  width: 100%;
+  padding: 4px 10px;
+  border-bottom: 1px solid var(--border);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.landingPage .landingPageHeader .landingPageHeaderTop .codingCardArea .codingCard .codingCardHeader h2 {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 2px 3px;
+}
+
+.landingPage .landingPageHeader .landingPageHeaderTop .codingCardArea .codingCard .codingCardHeader button {
+  border: none;
+  color: white;
+  margin: 1px;
+  border-radius: 5px;
+  padding: 0px 5px;
+}
+
+.landingPage .landingPageHeader .landingPageHeaderTop .codingCardArea .codingCard .codingCardHeader button svg {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+}
+
+.landingPage .landingPageHeader .landingPageHeaderTop .codingCardArea .codingCard .codingCardHeader button:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.landingPage .landingPageHeader .landingPageHeaderTop .codingCardArea .codingCard .codingCardMain {
+  width: 99%;
+  height: 99%;
+  border-radius: 3px 3px 4px 4px;
+  background-color: var(--background);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 8px 2px;
+}
+
+.landingPage .landingPageHeader .landingPageHeaderTop .codingCardArea .codingCard .codingCardMain .codingLine {
+  margin: 0px 10px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.landingPage .landingPageHeader .landingPageHeaderTop .codingCardArea .codingCard .codingCardMain .codingLine .code {
+  display: inline-block;
+  height: 13px;
+  margin: 4px 5px;
+  border-radius: 3px;
+}
+
+.landingPage .landingPageHeader .landingPageHeaderTop .codingCardArea .codingCard .codingCardMain .codeLog {
+  width: 100%;
+  height: 120px;
+  background-color: var(--border);
+  border-radius: 3px 3px 6px 6px;
+  overflow: hidden;
+}
+
+.landingPage .landingPageHeader .landingPageHeaderTop .codingCardArea .codingCard .codingCardMain .codeLog .codeOutput {
+  width: 100%;
+  text-align: center;
+  background-color: transparent;
+}
+
+.landingPage .landingPageHeader .landingPageHeaderTop .codingCardArea .codingCard .codingCardMain .codeLog .codeLine {
+  margin: 0px 10px;
+  border-radius: 3px;
+  overflow: hidden;
+  background-color: red;
+}
+
+.landingPage .landingPageHeader .landingPageHeaderTop .codingCardArea .codingCard .codingCardMain .codeLog .codeLine .code {
+  display: inline-block;
+  height: 13px;
+  margin: 4px 5px;
+  border-radius: 3px;
+}
+
+.landingPage .landingPageHeader .landingPageHeaderBottom {
+  padding: 10px 20px;
+  width: 100%;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.landingPage .landingPageHeader .landingPageHeaderBottom svg {
+  cursor: pointer;
+  width: 55px;
+  height: 55px;
+  background-color: transparent;
+  -webkit-animation-name: updown;
+          animation-name: updown;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: initial;
+          animation-direction: initial;
+  -webkit-animation-play-state: initial;
+          animation-play-state: initial;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -o-animation-delay: 0;
+  fill: rgba(var(--google-primary-color-rgb), 0.65) !important;
+  -webkit-transform: rotateZ(-45deg);
+          transform: rotateZ(-45deg);
+}
+
+.landingPage .landingPageCards {
+  background-color: transparent;
+}
+
+@-webkit-keyframes updown {
+  0% {
+    -webkit-transform: translateY(8px) rotateZ(-45deg);
+            transform: translateY(8px) rotateZ(-45deg);
+  }
+  50% {
+    -webkit-transform: translateY(0px) rotateZ(-45deg);
+            transform: translateY(0px) rotateZ(-45deg);
+  }
+  100% {
+    -webkit-transform: translateY(8px) rotateZ(-45deg);
+            transform: translateY(8px) rotateZ(-45deg);
+  }
+}
+
+@keyframes updown {
+  0% {
+    -webkit-transform: translateY(8px) rotateZ(-45deg);
+            transform: translateY(8px) rotateZ(-45deg);
+  }
+  50% {
+    -webkit-transform: translateY(0px) rotateZ(-45deg);
+            transform: translateY(0px) rotateZ(-45deg);
+  }
+  100% {
+    -webkit-transform: translateY(8px) rotateZ(-45deg);
+            transform: translateY(8px) rotateZ(-45deg);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .landingPage .landingPageHeader .landingPageHeaderTop .codingCardArea {
+    display: none;
+  }
+  .landingPage .landingPageHeader .landingPageHeaderTop .codingCardArea .codingCard {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .landingPage .landingPageHeader .landingPageHeaderTop .logoArea .logoSpan {
+    margin-bottom: 10px;
+  }
+  .landingPage .landingPageHeader .landingPageHeaderTop .logoArea .logoSpan svg {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    margin: 0;
+    padding: 0;
+    height: 75px;
+  }
+  .landingPage .landingPageHeader .landingPageHeaderTop .logoArea .logoSpan p span {
+    padding: 0 3px;
+  }
+  .landingPage .landingPageHeader .landingPageHeaderTop .logoArea .logoSpan p span:nth-child(1) {
+    font-size: 18px;
+  }
+  .landingPage .landingPageHeader .landingPageHeaderTop .logoArea .logoSpan p span:nth-child(2) {
+    font-size: 16px;
+  }
+  .landingPage .landingPageHeader .landingPageHeaderTop .logoArea .description p {
+    max-width: 330px;
+  }
+}
+
+@media screen and (max-height: 800px) {
+  .landingPage .landingPageHeader {
+    min-height: 80vh;
+    max-height: 90vh;
+  }
+}
+/*# sourceMappingURL=index.module.css.map */
