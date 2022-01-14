@@ -94,6 +94,33 @@ const TeamMembers = [
 
 export default TeamMembers
 
+export const WebsiteContributors = [
+    {
+        name: 'Sobhan Bera',
+        role: 'Executive Team',
+        profile: 'https://gdsc.community.dev/u/sobhan/',
+        twitter: 'https://twitter.com/berasobhan',
+        image: 'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2.0,f_auto,g_center,h_250,q_auto:good,w_250/v1/gcs/platform-data-dsc/avatars/sobhan_bera_ASJaCFd.png',
+        github: 'https://github.com/sobhanbera',
+    },
+    {
+        name: 'Vidhanshu Borade',
+        role: 'Executive Team',
+        profile: 'https://gdsc.community.dev/u/vidhanshu/',
+        twitter: '',
+        image: 'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2.0,f_auto,g_center,h_250,q_auto:good,w_250/v1/gcs/platform-data-dsc/avatars/vidhanshu_borade_5hzTEMI.png',
+        github: 'https://github.com/vidhanshu',
+    },
+    {
+        name: 'Laksh Samdariya',
+        role: 'Executive Team',
+        profile: 'https://gdsc.community.dev/u/m6kr9n/',
+        twitter: '',
+        image: 'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2.0,f_auto,g_center,h_250,q_auto:good,w_250/v1/gcs/platform-data-dsc/avatars/laksh_samdariya_uCzjpQN.jpg',
+        github: 'https://github.com/laksh29',
+    },
+]
+
 export const Lead = {
     name: 'Khushboo Agnihotri',
     role: 'GDSC Lead',
@@ -101,4 +128,3 @@ export const Lead = {
     twitter: 'https://twitter.com/_Khushboo_21',
     image: 'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2.0,f_auto,g_center,h_250,q_auto:good,w_250/v1/gcs/platform-data-dsc/avatars/khushboo_agnihotri_tnZ8u5n.jpeg',
 }
-
