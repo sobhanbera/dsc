@@ -29,7 +29,7 @@ export const homeCardApi = [
         content: undefined,
         inputPlaceholder: undefined,
         buttonTitle: 'Projects',
-        link: '/ourteam',
+        link: '/videos',
     },
     {
         id: 4,
@@ -47,7 +47,7 @@ export const homeCardApi = [
         content: undefined,
         inputPlaceholder: undefined,
         buttonTitle: 'Reach Us',
-        link: '#contactus',
+        link: '/socials',
     },
     {
         id: 6,
@@ -56,6 +56,6 @@ export const homeCardApi = [
         content: undefined,
         inputPlaceholder: 'Enter Email',
         buttonTitle: 'Talk With Us',
-        link: '/ourteam',
+        link: '#',
     },
 ]

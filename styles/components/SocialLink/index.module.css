@@ -48,7 +48,8 @@
   padding: 15px;
 }
 
-.socialLinkCard .socialLinkCardPlatformIcon svg {
+.socialLinkCard .socialLinkCardPlatformIcon svg,
+.socialLinkCard .socialLinkCardPlatformIcon .socialLinkCardPlatformIconExtra {
   width: 30px;
   height: 30px;
 }

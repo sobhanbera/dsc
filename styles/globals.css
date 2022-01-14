@@ -33,7 +33,6 @@
   --hover-background: #efefef;
   --border: #d7d7d7;
   --svg-color: #101010;
-  --unique: #000000;
 }
 
 .dark-theme {
@@ -55,32 +54,36 @@
   --hover-background: #272727;
   --border: #353535;
   --svg-color: #f7f7f7;
-  --unique: #000000;
 }
 
 .red {
   --google-primary-color: #db4437;
   --google-primary-color-rgb: 219, 68, 55;
+  --unique: #ffffff;
 }
 
 .blue {
   --google-primary-color: #4285f4;
   --google-primary-color-rgb: 66, 133, 244;
+  --unique: #ffffff;
 }
 
 .green {
   --google-primary-color: #0f9d58;
   --google-primary-color-rgb: 15, 157, 88;
+  --unique: #ffffff;
 }
 
 .yellow {
   --google-primary-color: #f4b400;
   --google-primary-color-rgb: 244, 180, 0;
+  --unique: #000000;
 }
 
 .white {
   --google-primary-color: #ffffff;
   --google-primary-color-rgb: 255, 255, 255;
+  --unique: #000000;
 }
 
 * {
