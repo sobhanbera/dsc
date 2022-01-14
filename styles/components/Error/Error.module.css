@@ -9,7 +9,7 @@
 .error {
     width: 90vw;
     max-width: 900px;
-    min-height: 270px;
+    min-height: 300px;
     margin: auto;
     background-image: url('../../../public/imgs/404dark.png');
     background-size: contain;
@@ -36,7 +36,6 @@
 .error p {
     font-size: 15px;
     text-align: center;
-    margin: 10px 0 90px 0px;
     max-width: 600px;
     color: rgb(70, 70, 70);
     background-color: transparent;
@@ -55,6 +54,11 @@
 
 .error button:hover {
     background-color: rgb(0, 103, 199);
+}
+
+.error .redirect {
+    margin: 10px;
+    color: rgb(5, 5, 5);
 }
 
 @media screen and (min-width:700px) {
