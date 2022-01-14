@@ -24,6 +24,7 @@
   --theme-color-rgb: 255, 255, 255;
   --theme-invert-color-rgb: 0, 0, 0;
   --text-color: #151515;
+  --text-color-rgb: 21, 21, 21;
   --text-color-light: #505050;
   --common-shadow: #7f7f7f50;
   --shadow-rgb: 90, 90, 90;
@@ -32,6 +33,7 @@
   --hover-background: #efefef;
   --border: #d7d7d7;
   --svg-color: #101010;
+  --unique: #000000;
 }
 
 .dark-theme {
@@ -44,6 +46,7 @@
   --theme-color-rgb: 0, 0, 0;
   --theme-invert-color-rgb: 255, 255, 255;
   --text-color: #efefef;
+  --text-color-rgb: 239, 239, 239;
   --text-color-light: #dfdfdf;
   --common-shadow: #7f7f7f50;
   --shadow-rgb: 127, 127, 127;
@@ -52,6 +55,7 @@
   --hover-background: #272727;
   --border: #353535;
   --svg-color: #f7f7f7;
+  --unique: #000000;
 }
 
 .red {
@@ -92,8 +96,12 @@
   text-decoration: none;
   font-size: 18px;
   color: var(--text-color);
-  background: var(--background);
+  background: transparent;
   font-family: Karla, Roboto, Ubuntu, sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 body {
