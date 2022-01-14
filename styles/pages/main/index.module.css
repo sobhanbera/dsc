@@ -261,13 +261,21 @@
   padding: 8px 2px;
 }
 
-.landingPage .landingPageHeader .landingPageHeaderTop .codingCardArea .codingCard .codingCardMain .codingLine {
+.landingPage .landingPageHeader .landingPageHeaderTop .codingCardArea .codingCard .codingCardMain .codingCardMainEditor {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  max-height: 245px;
+  width: 100%;
+}
+
+.landingPage .landingPageHeader .landingPageHeaderTop .codingCardArea .codingCard .codingCardMain .codingCardMainEditor .codingLine {
   margin: 0px 10px;
   border-radius: 3px;
   overflow: hidden;
 }
 
-.landingPage .landingPageHeader .landingPageHeaderTop .codingCardArea .codingCard .codingCardMain .codingLine .code {
+.landingPage .landingPageHeader .landingPageHeaderTop .codingCardArea .codingCard .codingCardMain .codingCardMainEditor .codingLine .code {
   display: inline-block;
   height: 13px;
   margin: 4px 5px;
@@ -286,16 +294,16 @@
   width: 100%;
   text-align: center;
   background-color: transparent;
+  border-bottom: 1px solid var(--border);
 }
 
-.landingPage .landingPageHeader .landingPageHeaderTop .codingCardArea .codingCard .codingCardMain .codeLog .codeLine {
+.landingPage .landingPageHeader .landingPageHeaderTop .codingCardArea .codingCard .codingCardMain .codeLog .codingLine {
   margin: 0px 10px;
   border-radius: 3px;
   overflow: hidden;
-  background-color: red;
 }
 
-.landingPage .landingPageHeader .landingPageHeaderTop .codingCardArea .codingCard .codingCardMain .codeLog .codeLine .code {
+.landingPage .landingPageHeader .landingPageHeaderTop .codingCardArea .codingCard .codingCardMain .codeLog .codingLine .code {
   display: inline-block;
   height: 13px;
   margin: 4px 5px;

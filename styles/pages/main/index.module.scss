@@ -197,16 +197,22 @@
                         justify-content: space-between;
                         padding: 8px 2px;
 
-                        .codingLine {
-                            margin: 0px 10px;
-                            border-radius: 3px;
-                            overflow: hidden;
+                        .codingCardMainEditor {
+                            flex-grow: 2;
+                            max-height: 245px; // it could be 250px since 250px max is available but for sake of some padding I am providing -5px
+                            width: 100%;
 
-                            .code {
-                                display: inline-block;
-                                height: 13px;
-                                margin: 4px 5px;
+                            .codingLine {
+                                margin: 0px 10px;
                                 border-radius: 3px;
+                                overflow: hidden;
+
+                                .code {
+                                    display: inline-block;
+                                    height: 13px;
+                                    margin: 4px 5px;
+                                    border-radius: 3px;
+                                }
                             }
                         }
 
@@ -221,13 +227,14 @@
                                 width: 100%;
                                 text-align: center;
                                 background-color: transparent;
+                                border-bottom: 1px solid var(--border);
                             }
 
-                            .codeLine {
+                            .codingLine {
                                 margin: 0px 10px;
                                 border-radius: 3px;
                                 overflow: hidden;
-                                background-color: red;
+                                // background-color: red;
 
                                 .code {
                                     display: inline-block;
