@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700;800&family=Poppins:wght@300;400;500&display=swap');
+
+.homeCard {
+    text-align: center;
+    max-width: 500px;
+    width: 80vw;
+    color: var(--text-color);
+
+    padding: 20px 10px;
+    margin: 120px auto;
+
+    background-color: transparent;
+
+    & * {
+        background-color: transparent;
+    }
+
+    .heading {
+        font-size: 1.7em;
+        color: var(--text-color);
+    }
+
+    .btn {
+        border: none;
+        margin: 10px;
+
+        a {
+            display: block;
+            min-width: 150px;
+            border-radius: 5px;
+
+            padding: 13px 25px;
+
+            font-size: 18px;
+
+            border: 1px solid transparent;
+            background-color: var(--google-primary-color);
+            color: var(--unique);
+
+            &:hover {
+                background-color: transparent;
+                border: 1px solid var(--google-primary-color);
+                color: var(--theme-invert-color);
+                cursor: pointer;
+            }
+        }
+    }
+
+    .para {
+        color: rgba(var(--text-color-rgb), 0.85);
+        margin: 30px auto;
+    }
+
+    .inp {
+        min-width: 200px;
+        width: 300px;
+        height: 40px;
+        text-align: center;
+        color: var(--text-color);
+
+        display: block;
+
+        background-color: rgba(var(--background-rgb), 0.75);
+        backdrop-filter: blur(10px);
+
+        flex-grow: 3;
+
+        padding: 0 16px 0 16px;
+        margin: 18px auto;
+
+        font-size: 15px;
+        font-family: Karla;
+
+        border: 1px solid var(--border);
+        border-radius: 4px;
+
+        &:focus {
+            border: 1px solid var(--google-primary-color);
+        }
+    }
+}

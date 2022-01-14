@@ -4,25 +4,29 @@ import Head from 'next/head'
 import {GOOGLE_COLORS} from '../constants'
 
 import Main from '../components/Main/main'
+import {useTheme} from '../context'
 
 export default function LandingPage() {
+    const {theme} = useTheme()
     const [backgroundColor, setBackgroundColor] = useState('#ffffff')
+
+    const LightModeColors = ['#FFFFFF', GOOGLE_COLORS.BLUE, GOOGLE_COLORS.RED, GOOGLE_COLORS.GREEN, GOOGLE_COLORS.YELLOW]
 
     useEffect(() => {
         window.addEventListener('scroll', () => {
             const {scrollY} = window
             if (scrollY > 0 && scrollY < 160) {
-                setBackgroundColor('#FFFFFF')
-            } else if (scrollY > 160 && scrollY < 1170) {
-                setBackgroundColor(GOOGLE_COLORS.BLUE + '50')
-            } else if (scrollY > 1170 && scrollY < 2190) {
-                setBackgroundColor(GOOGLE_COLORS.RED + '50')
-            } else if (scrollY > 2190 && scrollY < 3200) {
-                setBackgroundColor(GOOGLE_COLORS.GREEN + '50')
-            } else if (scrollY > 3200 && scrollY < 4230) {
-                setBackgroundColor(GOOGLE_COLORS.YELLOW + '50')
-            } else if (scrollY > 4230) {
-                setBackgroundColor('#FFFFFF')
+                setBackgroundColor(LightModeColors[0])
+            } else if (scrollY > 160 && scrollY < 800) {
+                setBackgroundColor(LightModeColors[1] + '10')
+            } else if (scrollY > 800 && scrollY < 1400) {
+                setBackgroundColor(LightModeColors[2] + '10')
+            } else if (scrollY > 1400 && scrollY < 2100) {
+                setBackgroundColor(LightModeColors[3] + '10')
+            } else if (scrollY > 2100 && scrollY < 2800) {
+                setBackgroundColor(LightModeColors[4] + '10')
+            } else if (scrollY > 2800) {
+                setBackgroundColor(LightModeColors[0])
             }
         })
 
@@ -36,7 +40,7 @@ export default function LandingPage() {
             style={{
                 display: 'flex',
                 flexDirection: 'column',
-                backgroundColor,
+                backgroundColor: theme ? backgroundColor : '#151515', // since only to change color on light mode
                 transition: 'background 1s',
             }}>
             <Head>
