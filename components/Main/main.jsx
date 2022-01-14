@@ -1,7 +1,8 @@
 import Aos from 'aos'
-import {useEffect, useRef, useState} from 'react'
+import {useCallback, useEffect, useRef, useState} from 'react'
 import {BsArrowDownLeft} from 'react-icons/bs'
 import {IoPlay} from 'react-icons/io5'
+import Link from 'next/link'
 
 import HomeCard from '.'
 import {WebsiteLogo} from '..'
@@ -38,10 +39,14 @@ export default function Main() {
 
                             <div className={styles.buttons}>
                                 <button>
-                                    <a href={'/ourteam'}>Our Team</a>
+                                    <Link href={'/ourteam'}>
+                                        <a>Our Team</a>
+                                    </Link>
                                 </button>
                                 <button>
-                                    <a href={'/events'}>Events</a>
+                                    <Link href={'/events'}>
+                                        <a>Events</a>
+                                    </Link>
                                 </button>
                             </div>
                         </div>
@@ -53,10 +58,13 @@ export default function Main() {
                 </div>
 
                 {/* the scroll down area */}
-                <div className={styles.landingPageHeaderBottom} ref={scrollRef}>
+                <div className={styles.landingPageHeaderBottom}>
                     <BsArrowDownLeft onClick={scrollDown} />
                 </div>
             </div>
+
+            {/* scroll helper */}
+            <div ref={scrollRef}></div>
 
             <div className={styles.landingPageCards}>
                 {homeCardApi.map(e => (
@@ -76,21 +84,19 @@ const CodingCard = () => {
         '#0f9d58',
         '#f4b400',
     ]
-    const logColor = ['#8f8f8f', '#afafaf', '#bfbfbf', '#606060', '#7f7f7f']
-    const width = ['30px', '45px', '52px', '60px', '75px']
+    const consoleLogsColor = ['#8f8f8f', '#afafaf', '#bfbfbf', '#606060', '#7f7f7f']
+    const width = ['30px', '45px', '60px', '75px']
     const fileNames = ['HelloWorld', 'Graph', 'DP', 'Tree', 'BST', 'MergeSort', 'BubbleSort', 'QuickSort', 'Algo', 'Heap', 'Arrays', 'BTC']
     const [changed, setChange] = useState(true)
 
     const random = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min
 
-    const changeChanged = () => {
+    const changeChanged = useCallback(() => {
         setChange(value => !value)
-    }
 
-    useEffect(() => {
-        colors.slice()
-        fileNames.slice()
-    }, [changed])
+        // colors.slice()
+        // fileNames.slice()
+    }, [])
 
     return (
         <div className={styles.codingCard}>
@@ -102,53 +108,34 @@ const CodingCard = () => {
             </div>
 
             <div className={styles.codingCardMain}>
-                <div className={styles.codingLine}>
-                    <div
-                        className={styles.code}
-                        style={{
-                            backgroundColor: colors[Math.floor(Math.random() * colors.length)],
-                            width: width[Math.floor(Math.random() * width.length)],
-                        }}></div>
-                    <div
-                        className={styles.code}
-                        style={{
-                            backgroundColor: colors[Math.floor(Math.random() * colors.length)],
-                            width: width[Math.floor(Math.random() * width.length)],
-                        }}></div>
-                    <div
-                        className={styles.code}
-                        style={{
-                            backgroundColor: colors[Math.floor(Math.random() * colors.length)],
-                            width: width[Math.floor(Math.random() * width.length)],
-                        }}></div>
+                <div className={styles.codingCardMainEditor}>
+                    {Array(random(5, 7))
+                        .fill(0)
+                        .map(codeLine => {
+                            return (
+                                <div className={styles.codingLine} key={codeLine}>
+                                    {Array(random(3, 5))
+                                        .fill(0)
+                                        .map(code => {
+                                            return (
+                                                <div
+                                                    key={code}
+                                                    className={styles.code}
+                                                    style={{
+                                                        backgroundColor: colors[Math.floor(Math.random() * colors.length)],
+                                                        width: width[Math.floor(Math.random() * width.length)],
+                                                    }}></div>
+                                            )
+                                        })}
+                                </div>
+                            )
+                        })}
                 </div>
-
-                {Array(random(5, 7))
-                    .fill(0)
-                    .map(codeLine => {
-                        return (
-                            <div className={styles.codingLine} key={codeLine}>
-                                {Array(random(3, 5))
-                                    .fill(0)
-                                    .map(codeLine => {
-                                        return (
-                                            <div
-                                                key={codeLine}
-                                                className={styles.code}
-                                                style={{
-                                                    backgroundColor: colors[Math.floor(Math.random() * colors.length)],
-                                                    width: width[Math.floor(Math.random() * width.length)],
-                                                }}></div>
-                                        )
-                                    })}
-                            </div>
-                        )
-                    })}
 
                 <div className={styles.codeLog}>
                     <div className={styles.codeOutput}>Console</div>
 
-                    {Array(random(1, 2))
+                    {Array(random(2, 3))
                         .fill(0)
                         .map(codeLine => {
                             return (
@@ -158,15 +145,15 @@ const CodingCard = () => {
                                     style={{
                                         backgroundColor: 'transparent',
                                     }}>
-                                    {Array(random(3, 5))
+                                    {Array(random(2, 4))
                                         .fill(0)
-                                        .map(codeLine => {
+                                        .map(code => {
                                             return (
                                                 <div
-                                                    key={codeLine}
+                                                    key={code}
                                                     className={styles.code}
                                                     style={{
-                                                        backgroundColor: logColor[Math.floor(Math.random() * logColor.length)],
+                                                        backgroundColor: consoleLogsColor[Math.floor(Math.random() * consoleLogsColor.length)],
                                                         width: width[Math.floor(Math.random() * width.length)],
                                                     }}></div>
                                             )

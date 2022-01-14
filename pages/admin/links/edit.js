@@ -235,12 +235,11 @@ export default function AdminSideEdit() {
                 </form>
             </div>
 
-            {socialLinks[0].link.length > 0 ? (
-                <div className={styles.linksAreaStarts}>
-                    <h1 id="alllinks">
-                        <a href="#alllinks">All Links</a>
-                    </h1>
-
+            <div className={styles.linksAreaStarts}>
+                <h1 id="alllinks">
+                    <a href="#alllinks">All Links</a>
+                </h1>
+                {socialLinks[0].link.length > 0 ? (
                     <div className={styles.linksArea}>
                         {socialLinks[0].link.length > 0
                             ? socialLinks.map(social => {
@@ -248,8 +247,10 @@ export default function AdminSideEdit() {
                               })
                             : null}
                     </div>
-                </div>
-            ) : null}
+                ) : (
+                    <p>No Links Added. Start Adding Them All!</p>
+                )}
+            </div>
 
             <UpdateCard linkData={updateLinkData} clearUpdation={() => setUpdateLinkData(SocialLinkData)} />
         </div>
