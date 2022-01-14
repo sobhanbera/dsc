@@ -20,7 +20,9 @@ function HomeCard({heading, subcontent, content, buttonTitle, inputPlaceholder, 
             {inputPlaceholder ? <input className={styles.inp} type="text" placeholder={inputPlaceholder} /> : null}
             {buttonTitle ? (
                 <button className={styles.btn}>
-                    <a href={link}>{buttonTitle}</a>
+                    <Link href={link}>
+                        <a>{buttonTitle}</a>
+                    </Link>
                 </button>
             ) : null}
             {children}
