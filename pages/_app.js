@@ -15,8 +15,8 @@ export default function MyApp({Component, pageProps}) {
 
     // toggle secret feature to show or not...
     const [showSecretFeature, setShowSecretFeature] = useState(false)
-    const [username, setUsername] = useState('sobhanbera258')
-    const [password, setPassword] = useState('TuPEknzhh9dA2AZZ')
+    const [username, setUsername] = useState('')
+    const [password, setPassword] = useState('')
     const [loading, setLoading] = useState(false) // loading controller
 
     const signIN = e => {
@@ -69,8 +69,8 @@ export default function MyApp({Component, pageProps}) {
                 <div className={`${styles.secretFeature} ${showSecretFeature ? styles.active : styles.inactive}`} onClick={() => setShowSecretFeature(false)}>
                     <div className={styles.secretFeatureCard} onClick={e => e.stopPropagation()}>
                         <form onSubmit={e => signIN(e)} onClick={e => e.stopPropagation()}>
-                            <TextInput onClick={e => e.stopPropagation()} searchText={username} setSearch={setUsername} placeholder={'Welcome! You have found a secret feature...'} />
-                            <TextInput onClick={e => e.stopPropagation()} searchText={password} setSearch={setPassword} placeholder={'Nothing to do here. This is just for fun! :)'} disabled={username.charAt(0).toLowerCase() !== 's'} />
+                            <TextInput onClick={e => e.stopPropagation()} searchText={username} setSearch={setUsername} placeholder={'Ohh! you have found a hidden feature... Congrats!'} />
+                            <TextInput onClick={e => e.stopPropagation()} searchText={password} setSearch={setPassword} placeholder={'Nothing to do here. Thanks for visiting :)'} disabled={username.charAt(0).toLowerCase() !== 's'} />
                             <button></button>
 
                             {loading ? <SmallLoading /> : null}
