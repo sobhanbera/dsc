@@ -66,7 +66,7 @@ export default function Main() {
         </div>
     )
 }
-
+//
 const CodingCard = () => {
     const colors = [
         // '#4169E1',
