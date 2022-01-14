@@ -18,13 +18,13 @@ export default function LandingPage() {
             if (scrollY > 0 && scrollY < 160) {
                 setBackgroundColor(LightModeColors[0])
             } else if (scrollY > 160 && scrollY < 800) {
-                setBackgroundColor(LightModeColors[1] + '10')
+                setBackgroundColor(LightModeColors[1] + '50')
             } else if (scrollY > 800 && scrollY < 1400) {
-                setBackgroundColor(LightModeColors[2] + '10')
+                setBackgroundColor(LightModeColors[2] + '50')
             } else if (scrollY > 1400 && scrollY < 2100) {
-                setBackgroundColor(LightModeColors[3] + '10')
+                setBackgroundColor(LightModeColors[3] + '50')
             } else if (scrollY > 2100 && scrollY < 2800) {
-                setBackgroundColor(LightModeColors[4] + '10')
+                setBackgroundColor(LightModeColors[4] + '50')
             } else if (scrollY > 2800) {
                 setBackgroundColor(LightModeColors[0])
             }

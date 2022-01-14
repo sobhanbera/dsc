@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import Image from 'next/image'
 import htmlParser from 'html-react-parser'
 import {VscClose} from 'react-icons/vsc'
+import Head from 'next/head'
 
 import styles from '../styles/pages/Events/index.module.css'
 import EventsList, {CurrentEvent} from '../constants/events'
@@ -17,6 +18,12 @@ export default function Events() {
 
     return (
         <div className={styles.eventsPage}>
+            <Head>
+                <title>DSC GHRCE | Events</title>
+                <meta name="description" content="We conduct events and other programs continously. All the events details are list in this page." />
+                <meta name="keywords" content="programs, dsc events, ghrce events, dsc-ghrce events, dsc-ghrce, dsc, ghrce, hackathons" />
+            </Head>
+
             <h1>Events</h1>
 
             <div className={styles.mainEventsContainer}>

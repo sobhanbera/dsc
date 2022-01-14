@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import {getDatabase, ref, onValue} from 'firebase/database'
+import Head from 'next/head'
 
 import {SmallLoading, SocialLink} from '../components'
 import styles from '../styles/pages/Socials/index.module.css'
@@ -51,6 +52,12 @@ export default function Socials() {
 
     return (
         <div className={styles.socialsPage}>
+            <Head>
+                <title>DSC GHRCE | Social Pages</title>
+                <meta name="description" content="We are available in wide range of social media platform. Many of them are listed here. Communicate with us!" />
+                <meta name="keywords" content="socials, dsc socials, ghrce socials, dsc-ghrce socials, dsc-ghrce, dsc, ghrce, social media links, linktree" />
+            </Head>
+
             <h1>Our Other Pages</h1>
 
             <div className={styles.linksAreaStarts}>

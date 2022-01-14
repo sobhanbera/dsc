@@ -68,11 +68,11 @@ export default function Header({headerFocused}) {
                                 <a>Videos</a>
                             </Link>
                         </li>
-                        <li className={router.asPath === '/contactus' ? styles.activePage : ''}>
+                        {/* <li className={router.asPath === '/contactus' ? styles.activePage : ''}>
                             <Link href="/contactus">
                                 <a>Reach Us</a>
                             </Link>
-                        </li>
+                        </li> */}
 
                         {/* linktree implementation */}
                         <li className={router.asPath === '/socials' ? styles.activePage : ''}>
