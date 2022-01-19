@@ -28,7 +28,6 @@ export default function Footer({triggerSecret}) {
 
                     <div className={`${styles.contactArea} ${styles.container}`}>
                         <span>Contact</span>
-// <span>{CONTACT_AREA_NAME}</span>
                         <span>{CONTACT_AREA_POSTITION}</span>
                         <span>
                             {CONTACT_AREA_PROVIDED} - <a href={CONTACT_AREA_LINK}>dscghrce@gmail.com</a>
