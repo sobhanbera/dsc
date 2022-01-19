@@ -1,7 +1,7 @@
 /**
- * this file contains all the contant variables
- * which will be required througout the website
- */
+* this file contains all the contant variables
+* which will be required througout the website
+*/
 
 import {randomElementOfArray} from '../utils'
 
@@ -13,7 +13,7 @@ export const GOOGLE_COLORS = {
 }
 export const RANDOM_GOOGLE_COLOR = randomElementOfArray(Object.values(['red', 'blue', 'green', 'yellow']))
 
-export const CONTACT_AREA_LINK = 'mailto:sobhanbera258@gmail.com'
+export const CONTACT_AREA_LINK = 'mailto:dscghrce@gmail.com'
 export const CONTACT_AREA_NAME = 'Khushboo Agnihotri'
 export const CONTACT_AREA_POSTITION = 'Lead - GDSC GHRCE'
 export const CONTACT_AREA_PROVIDED = 'Email'
